@@ -1,0 +1,16 @@
+.payment-details-panel { min-width: 0; max-width: 100%; padding: 16px; border: 1px solid #d9e0e7; border-radius: 8px; margin-top: 16px; }
+.payment-details-panel > p, .payment-details-note { color: #59616d; line-height: 1.5; overflow-wrap: anywhere; }
+.payment-details-panel button { margin: 4px 8px 8px 0; }
+.payment-details-totals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.payment-details-totals dt { font-weight: 600; margin-bottom: 6px; }
+.payment-details-totals dd { margin: 0 0 4px; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.payment-details-table-scroll { max-width: 100%; overflow-x: auto; border: 1px solid #d9e0e7; border-radius: 5px; }
+.payment-details-table-scroll table { width: 100%; min-width: 740px; border-collapse: collapse; font-size: .875rem; }
+.payment-details-table-scroll caption { padding: 10px 12px; text-align: left; font-weight: 600; }
+.payment-details-table-scroll th { background: #edf1f6; text-align: left; }
+.payment-details-table-scroll th, .payment-details-table-scroll td { padding: 9px 12px; border-bottom: 1px solid #e2e6eb; }
+.payment-details-table-scroll td:nth-child(3) { max-width: 240px; overflow-wrap: anywhere; }
+.payment-details-table-scroll td:nth-child(5), .payment-details-table-scroll td:nth-child(7) { white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums; }
+.payment-details-pagination { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+.payment-details-panel :focus-visible { outline: 2px solid #416994; outline-offset: 2px; }
+@media (max-width: 640px) { .payment-details-totals { grid-template-columns: 1fr; } .payment-details-panel { padding: 10px; } }

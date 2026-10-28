@@ -1,0 +1,47 @@
+.budget-adjustments-page { padding: 0; }
+.budget-adjustments-page .directory-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.budget-adjustments-page.adjustment-list-page > h1,
+.bms-unified-theme .workspace-panel .budget-adjustments-page.adjustment-list-page > h1 { margin-bottom: 16px; }
+.budget-adjustments-page .adjustment-list-actions { margin-bottom: 16px; row-gap: 12px; }
+.budget-adjustments-page .adjustment-list-actions > label { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-width: 0; }
+.budget-adjustments-page .adjustment-list-actions select { width: 430px; max-width: 100%; }
+.budget-adjustments-page .adjustment-list-wrap,
+.bms-unified-theme .workspace-panel .budget-adjustments-page .adjustment-list-wrap { width: fit-content; max-width: 100%; overflow-x: auto; }
+.budget-adjustments-page .adjustment-list-grid,
+.bms-unified-theme .workspace-panel .budget-adjustments-page .adjustment-list-grid { width: max-content; min-width: 0; table-layout: auto; }
+.budget-adjustments-page .adjustment-list-grid :is(th,td),
+.bms-unified-theme .workspace-panel .budget-adjustments-page .adjustment-list-grid :is(th,td) { padding: 6px 8px; white-space: nowrap; }
+.budget-adjustments-page .adjustment-list-grid th { text-align: center; }
+.budget-adjustments-page .adjustment-list-grid .amount-cell { text-align: right; }
+.budget-adjustments-page :is(select,input,textarea) { max-width: 100%; min-width: 0; border: 1px solid #bfc3c8; border-radius: 6px; padding: 6px; }
+.budget-adjustments-page textarea { display: block; width: 100%; resize: vertical; min-height: 50px; }
+.budget-adjustments-page .adjustment-reason { display: block; margin: 12px 0; }
+.budget-adjustments-page .adjustment-moves,
+.bms-unified-theme .workspace-panel .budget-adjustments-page .adjustment-moves { width: 100%; min-width: 1158px; border-collapse: separate; border-spacing: 0; table-layout: fixed; font-size: 13px; }
+.adjustment-moves :is(td,th) { padding: 2px; border: 1px solid var(--bms-border-soft,#dddfe2); vertical-align: middle; }
+.budget-adjustments-page .adjustment-moves th,
+.bms-unified-theme .workspace-panel .budget-adjustments-page .adjustment-moves th { text-align: center; vertical-align: middle; white-space: normal; background: #f2f2f2; color: #7a1020; }
+.adjustment-col-article { width: 30%; }
+.adjustment-col-period { width: 140px; }
+.adjustment-col-free { width: 150px; }
+.adjustment-col-kind { width: 125px; }
+.adjustment-col-target { width: 20%; }
+.adjustment-col-amount { width: 120px; }
+.adjustment-col-actions { width: 62px; }
+.budget-adjustments-page .adjustment-moves tbody :is(tr,td),
+.bms-unified-theme .workspace-panel .budget-adjustments-page .adjustment-moves tbody :is(tr,td) {
+ height: 29px; padding: 2px; border-top: 0; border-bottom: 0; box-shadow: inset 0 -1px var(--bms-border-soft,#dddfe2);
+}
+.budget-adjustments-page .adjustment-moves td > :is(select,input),
+.bms-unified-theme .workspace-panel .budget-adjustments-page .adjustment-moves td > :is(select,input) {
+ width: 100%; min-width: 0; height: 25px; min-height: 25px; max-height: 25px; box-sizing: border-box;
+ display: block; margin: 0; padding: 1px 4px; line-height: 21px; font: inherit;
+}
+.budget-adjustments-page .adjustment-moves .line-delete-button,
+.bms-unified-theme .workspace-panel .budget-adjustments-page .adjustment-moves .line-delete-button {
+ width: 25px; min-width: 25px; max-width: 25px; height: 25px; min-height: 25px; max-height: 25px;
+ padding: 3px; margin: 0 auto; display: grid; place-items: center; line-height: 1;
+}
+.budget-adjustments-page .adjustment-add-move { margin-top: 12px; }
+.adjustment-moves .amount-cell { text-align: right; white-space: nowrap; }
+.adjustment-moves tfoot { background: #fff8cf; font-weight: 700; }

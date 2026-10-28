@@ -1,0 +1,55 @@
+**/bin/
+**/obj/
+**/node_modules/
+**/dist/
+**/.vite/
+**/.npm-cache/
+**/*.tsbuildinfo
+**/vite.config.js
+**/vite.config.d.ts
+**/TestResults/
+**/*.user
+**/*.suo
+**/.vs/
+**/.idea/
+.env
+.env.*
+!.env.example
+appsettings.Production.json
+secrets.json
+*.pfx
+*.p12
+*.key
+*.pem
+*.cer
+*.jks
+*.keystore
+artifacts/
+# W557 browser acceptance artifacts: traces, screenshots and downloaded
+# workbooks of one run. The manifest with their hashes is committed; the
+# binaries are not.
+tests/browser/artifacts/
+
+# Public source package: never commit installation state, real data or builds.
+**/*.mdf
+**/*.ndf
+**/*.ldf
+**/*.bak
+**/*.dt
+**/*.cf
+**/*.db
+**/*.sqlite
+**/*.zip
+**/*.7z
+**/*.log
+**/*.trx
+**/*.pdb
+**/.vite-cache/
+**/task-mail.json
+**/appsettings.Local.json
+**/appsettings.Staging.json
+**/launchSettings.json
+**/captures/
+**/state/
+integrations/**/*.json
+!integrations/**/*.example.json

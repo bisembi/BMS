@@ -1,0 +1,455 @@
+.list-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.list-toolbar {
+  min-height: 38px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 0;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #dadde1;
+}
+
+.list-toolbar-spacer {
+  flex: 1;
+}
+
+/* Give the request actions the same breathing room on every panel edge. */
+.list-toolbar.expense-request-list-toolbar {
+  padding: 6px;
+}
+
+.request-page-size460 { display: inline-flex; align-items: center; gap: 6px; color: #5d6470; font-size: 12px; line-height: 20px; white-space: nowrap; }
+.request-page-size460 select,
+.bms-unified-theme .workspace-panel .expense-request-list-toolbar .request-page-size460 select { box-sizing: border-box; width: 65px; min-width: 65px; height: 25px; min-height: 25px; padding: 1px 6px; font-size: 12px; line-height: 20px; }
+
+.list-filter-panel {
+  margin-top: 4px;
+  border-bottom: 1px solid #dadde1;
+}
+
+.list-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 2px 0;
+}
+
+.list-filter-count {
+  color: #5d6470;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.list-filter-body {
+  padding: 4px 0 8px;
+}
+
+.list-filter-body[hidden] {
+  display: none;
+}
+
+.list-filter-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 4px 12px;
+  min-width: 0;
+  margin: 0;
+  padding: 6px 8px;
+  border: 1px solid #e2e4e8;
+  background: #fbfbfa;
+}
+
+.list-filter-legend {
+  padding: 0 4px;
+  color: #5d6470;
+  font-size: 12px;
+}
+
+.list-filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  color: #5d6470;
+  font-size: 12px;
+  line-height: 1.15;
+}
+
+.list-filter-field > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-filter-checkbox {
+  align-self: end;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  min-height: 24px;
+}
+
+.list-filter-checkbox input {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  min-height: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Keep this compact toolbar choice separate from other filter checkboxes. */
+.list-toolbar .request-hide-drafts {
+  align-self: center;
+  margin-inline-end: 10px;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.list-toolbar .request-hide-drafts input[type="checkbox"] {
+  appearance: none;
+  display: grid;
+  place-content: center;
+  box-sizing: border-box;
+  flex: 0 0 13px;
+  width: 13px;
+  min-width: 13px;
+  height: 13px;
+  min-height: 13px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid currentColor;
+  border-radius: 0;
+  background: #fff;
+  color: inherit;
+}
+
+.list-toolbar .request-hide-drafts input[type="checkbox"]:checked::before {
+  content: '';
+  width: 7px;
+  height: 4px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-1px) rotate(-45deg);
+}
+
+.list-toolbar .request-hide-drafts input[type="checkbox"]:disabled { opacity: .55; }
+
+@media (forced-colors: active) {
+  .list-toolbar .request-hide-drafts input[type="checkbox"] { appearance: auto; }
+  .list-toolbar .request-hide-drafts input[type="checkbox"]::before { display: none; }
+}
+
+.list-filter-field input:not([type="checkbox"]),
+.list-filter-field select {
+  width: 100%;
+  min-width: 0;
+  min-height: 24px;
+  padding: 2px 5px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: #232323;
+  font-size: 13px;
+}
+
+.list-filter-field input:focus-visible,
+.list-filter-field select:focus-visible {
+  outline: 2px solid #9b111e;
+  outline-offset: -2px;
+}
+
+.list-filter-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 0 0;
+}
+
+.list-filter-error {
+  margin: 6px 0 0;
+  padding: 5px 8px;
+  border: 1px solid var(--bms-border, #d7d7d7);
+  background: var(--bms-surface-subtle, #f7f7f7);
+  color: #8a2b2b;
+  font-size: 13px;
+}
+
+.audit-filter-form {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(170px, 1fr));
+  gap: 7px 9px;
+  margin-bottom: 8px;
+  padding: 9px;
+  border: 1px solid #d6d8db;
+  background: #fafafa;
+}
+
+.audit-filter-form label {
+  display: grid;
+  gap: 3px;
+  color: #5d6470;
+  font-size: 11px;
+}
+
+.audit-filter-form input {
+  min-width: 0;
+  min-height: 29px;
+  padding: 4px 6px;
+  border: 1px solid #bfc3c9;
+  background: #fff;
+  color: #232323;
+}
+
+.audit-filter-actions {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+@media (max-width: 980px) {
+  .audit-filter-form { grid-template-columns: repeat(2, minmax(160px, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  .audit-filter-form { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .list-filter-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .list-filter-bar {
+    flex-wrap: wrap;
+  }
+}
+
+.list-range,
+.list-summary {
+  color: #6b7280;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.request-grid-wrap {
+  margin-top: 8px;
+  overflow: auto;
+  border: 1px solid #d6d8db;
+}
+
+.request-grid {
+  width: 100%;
+  min-width: 1020px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.request-grid th {
+  background: #f4f4f2;
+  color: #454545;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.request-grid th,
+.request-grid td {
+  min-height: 27px;
+  padding: 4px 6px;
+  border-right: 1px solid #dddfe2;
+  border-bottom: 1px solid #dddfe2;
+}
+
+.request-grid[data-bms-fit-columns="content"] td {
+  overflow-wrap: anywhere;
+  overflow: hidden;
+}
+
+.request-grid[data-bms-fit-columns="content"] thead th {
+  height: 38px;
+  line-height: 16px;
+  box-sizing: border-box;
+}
+.request-grid .request-header-line { display: block; white-space: nowrap; }
+.request-grid[data-bms-fit-columns="content"] .amount-cell { min-width: 40px; }
+
+.request-grid th:last-child,
+.request-grid td:last-child {
+  width: auto;
+  min-width: 96px;
+  border-right: 0;
+}
+.request-row-actions { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+
+/* Semantic cells keep their alignment when optional business columns are shown. */
+.request-grid .request-date-cell { white-space: nowrap; text-align: center; }
+
+.request-grid :is(.request-budget-cell, .request-status-cell, .request-actions-cell) {
+  text-align: center;
+  vertical-align: middle;
+}
+/* Compact values only: headings share the standard table typography. */
+.request-grid td:is(.request-budget-cell, .request-status-cell) {
+  font-size: calc(1em - 1pt);
+}
+.request-grid :is(.budget-indicator, .status-chip) {
+  min-height: 0;
+  padding: 1px 5px;
+  line-height: 1.25;
+  border-radius: 8px;
+}
+
+/* Match the register's compact budget badge without shrinking its header. */
+.request-grid[data-bms-fit-columns="content"] .urgency-chip {
+  font-size: calc(1em - 1pt);
+  min-height: 0;
+  padding: 1px 5px;
+  line-height: 1.25;
+  border-radius: 8px;
+}
+
+.request-grid .request-grid-row-openable { cursor: pointer; }
+.request-grid .request-grid-row-openable:hover > td,
+.request-grid .request-grid-row-openable:focus-visible > td {
+  background: #fff4c2;
+}
+.request-grid .request-grid-row-openable:focus-visible {
+  outline: 2px solid #a50920;
+  outline-offset: -2px;
+}
+
+.request-grid tbody .request-grid-row-inactive > td {
+  background: #f1f2f3;
+  color: #747b84;
+}
+
+.request-grid .audit-detail-row > td {
+  width: auto;
+  padding: 10px;
+  background: #fafafa;
+}
+
+.request-grid .audit-detail-row .history-table th:last-child,
+.request-grid .audit-detail-row .history-table td:last-child {
+  width: 27.5%;
+}
+
+.request-grid .amount-cell {
+  min-width: 145px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.purpose-cell {
+  min-width: 220px;
+  max-width: 360px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.request-link {
+  min-height: 22px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #0f6fc5;
+  white-space: nowrap;
+}
+
+.request-link:hover {
+  text-decoration: underline;
+}
+
+.request-link-inactive,
+.request-link-inactive:hover {
+  color: inherit;
+  cursor: default;
+  text-decoration: none;
+}
+
+.row-action.neutral {
+  color: #505965;
+}
+
+.row-action-inactive {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.45;
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 21px;
+  padding: 2px 7px;
+  border: 1px solid #d3c56b;
+  border-radius: 10px;
+  background: #fff8cf;
+  color: #67520a;
+  white-space: nowrap;
+}
+
+/* Status colours are scoped to the request register; labels remain explicit. */
+.request-grid .status-chip.draft { background: #f3f4f6; border-color: #cbd0d8; color: #4b5563; }
+.request-grid .status-chip.returned { background: #ffedd5; border-color: #fdba74; color: #9a3412; }
+.request-grid .status-chip.in_approval { background: #dbeafe; border-color: #93c5fd; color: #1e40af; }
+.request-grid .status-chip.in_approval[data-status-tone="cfo-owner"] { background: #fff3e0; border-color: #fb923c; color: #9a3412; }
+.request-grid .status-chip.approved { background: #e6f4ea; border-color: #a7d4b7; color: #276749; }
+.request-grid .status-chip.awaiting_nsi { background: #ede9fe; border-color: #c4b5fd; color: #5b21b6; }
+.request-grid .status-chip.to_pay { background: #dcfce7; border-color: #86c99b; color: #166534; font-weight: 600; }
+.request-grid .status-chip.partially_paid { background: #cffafe; border-color: #67d4df; color: #155e75; }
+.request-grid .status-chip.paid { background: #15803d; border-color: #166534; color: #ffffff; }
+.request-grid .status-chip.closed { background: #e2e8f0; border-color: #a9b8cd; color: #334155; }
+.request-grid .status-chip.rejected { background: #fee2e2; border-color: #fca5a5; color: #991b1b; }
+.request-grid .status-chip.cancelled { background: #e5e7eb; border-color: #b7bdc7; color: #4b5563; }
+.request-grid .budget-indicator.over { color: #e00000; font-weight: 700; }
+
+/* Atomic inline badges/buttons need an explicit decoration too. Actions and
+   their hit targets remain unchanged; only cancelled request text is struck. */
+.request-grid .request-grid-row-cancelled > td,
+.request-grid .request-grid-row-cancelled > td :is(.request-link, .status-chip, .urgency-chip, .budget-indicator) {
+  text-decoration-line: line-through;
+}
+
+.bms-unified-theme .workspace-panel .request-grid .request-grid-row-cancelled > td,
+.bms-unified-theme .workspace-panel .request-grid .request-grid-row-cancelled > td :is(.request-link, .status-chip, .urgency-chip, .budget-indicator) {
+  color: #666666;
+}
+
+.urgency-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 21px;
+  padding: 2px 7px;
+  border: 1px solid #c9cdd2;
+  border-radius: 10px;
+  background: #f4f5f6;
+  color: #505965;
+  white-space: nowrap;
+}
+
+.urgency-chip.urgent {
+  border-color: #d98a8a;
+  background: var(--bms-surface-subtle, #f7f7f7);
+  color: #a12626;
+  font-weight: 600;
+}
+
+.empty-grid {
+  padding: 14px !important;
+  color: #6b7280;
+  text-align: center;
+}
+
+.list-summary {
+  margin-top: 6px;
+}

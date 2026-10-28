@@ -1,0 +1,38 @@
+.budget-instance-line-table .budget-line-sort-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  padding: 0 10px 0 0;
+  cursor: pointer;
+  max-width: 100%;
+  white-space: nowrap;
+}
+/* Keep the shared button border/height; only widen header label frames. */
+.bms-unified-theme .workspace-panel .budget-instance-line-table .budget-line-sort-button {
+  padding-inline: 12px;
+}
+.budget-line-sort-button:focus-visible { outline: 2px solid #275c88; outline-offset: 2px; }
+.budget-line-sort-button:disabled { cursor: wait; }
+.budget-line-sort-symbol { font-size: 0.8em; flex-shrink: 0; }
+
+/* All document rows belong to the page's vertical viewport. Keep only the
+   horizontal viewport needed for wide/resized columns on a narrow screen. */
+.budget-instance-workspace .budget-instance-line-wrap,
+.bms-unified-theme .workspace-panel .budget-instance-workspace .budget-instance-line-wrap {
+  height: auto;
+  max-height: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+/* The theme's generic input height must not enlarge this invisible native
+   month hit target beyond its 25px visible control or the final table row. */
+.bms-unified-theme .workspace-panel .budget-instance-workspace .budget-instance-line-table .compact-month-native {
+  height: 25px;
+  min-height: 25px;
+  max-height: 25px;
+}

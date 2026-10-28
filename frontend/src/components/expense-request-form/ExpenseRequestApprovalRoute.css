@@ -1,0 +1,5 @@
+.expense-approval-route { padding: 12px 14px; border: 1px solid #ddd; border-radius: 6px; background: #fff; }
+.expense-route-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 20px; margin-bottom: 8px; }
+.expense-route-heading .section-title { margin: 0; }
+.expense-route-chain { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; line-height: 1.5; }
+.expense-route-chain .current { font-weight: 600; color: #970e22; }

@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="src/Bms.Domain/Bms.Domain.csproj" />
+  <Project Path="src/Bms.Application/Bms.Application.csproj" />
+  <Project Path="src/Bms.Infrastructure/Bms.Infrastructure.csproj" />
+  <Project Path="src/Bms.Api/Bms.Api.csproj" />
+</Solution>

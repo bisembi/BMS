@@ -1,0 +1,795 @@
+@import './filter-panels.css';
+
+/*
+ * BMS unified workspace theme
+ *
+ * Budgeting is the visual reference for the application: white surfaces,
+ * neutral gray fills and ruby text accents, rounded controls and compact data tables. Page-level
+ * styles remain responsible for layout and special status colours; this
+ * layer normalises the shared visual language across directories, documents,
+ * calendars and operational reports.
+ */
+
+.bms-unified-theme {
+  --bms-ruby-900: #5b0a16;
+  --bms-ruby-800: #7a1020;
+  --bms-ruby-700: #9b111e;
+  --bms-ruby-600: #b21e2b;
+  --bms-selection: #e6e6e6;
+  --bms-surface-subtle: #f7f7f7;
+  --bms-border: #d7d7d7;
+  --bms-border-strong: #bfbfbf;
+  --bms-border-soft: #e6e6e6;
+  --bms-surface: #ffffff;
+  --bms-surface-muted: #f2f2f2;
+  --bms-header: #f2f2f2;
+  --bms-text: #333333;
+  --bms-text-soft: #5f5f5f;
+  --bms-muted: #777777;
+  --bms-disabled: #f5f5f5;
+  --bms-disabled-text: #8a8a8a;
+}
+
+/* The reference uses a gray tab strip, white active tabs and yellow navigation. */
+.bms-unified-theme .workspace-tab-strip,
+.bms-unified-theme .workspace-tab-strip .workspace-tab:not(.active),
+.bms-unified-theme .workspace-tab-entry:not(.active),
+.bms-unified-theme .workspace-tab-entry:not(.active) .workspace-tab {
+  background: var(--bms-header);
+}
+
+.bms-unified-theme .workspace-tab-entry.active,
+.bms-unified-theme .workspace-tab-strip .workspace-tab.active,
+.bms-unified-theme .workspace-tab-entry.active .workspace-tab {
+  background: var(--bms-surface);
+}
+
+/* Shared page rhythm and typography. */
+.bms-unified-theme .workspace-panel {
+  color: var(--bms-text);
+}
+
+.bms-unified-theme .workspace-panel > :is(.directory-page, .list-page, .bdds-page,
+  .expense-request-form-page, .budget-execution-page, .payment-calendar-page,
+  .dated-calendar-page, .active-accruals-page, .manual-deficits-page,
+  .approval-matrix-page, .placeholder-page, .finance-workspace,
+  .notification-administration, .session-gate) {
+  min-width: 0;
+}
+
+.bms-unified-theme .workspace-panel h1,
+.bms-unified-theme .workspace-panel h2,
+.bms-unified-theme .workspace-panel h3,
+.bms-unified-theme .workspace-panel h4 {
+  color: var(--bms-ruby-800);
+}
+
+.bms-unified-theme .workspace-panel h1 {
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 650;
+  letter-spacing: -.015em;
+}
+
+.bms-unified-theme .workspace-panel h2 {
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 650;
+}
+
+.bms-unified-theme .workspace-panel :is(.muted, .directory-note,
+  .budget-execution-note, .approval-matrix-note, .closing-note,
+  .dated-calendar-help, .dated-calendar-period, .dated-calendar-export,
+  .manual-deficit-lead, .section-hint) {
+  color: var(--bms-muted);
+}
+
+.bms-unified-theme .workspace-panel :is(.directory-page, .list-page, .bdds-page,
+  .expense-request-form-page, .budget-execution-page, .payment-calendar-page,
+  .dated-calendar-page, .active-accruals-page, .manual-deficits-page,
+  .approval-matrix-page, .finance-workspace, .notification-administration) {
+  padding: 4px 0 22px;
+}
+
+.bms-unified-theme .workspace-panel :is(.directory-page, .list-page, .bdds-page) > h1,
+.bms-unified-theme .workspace-panel :is(.directory-page, .list-page) > .list-heading {
+  margin-bottom: 12px;
+}
+
+/* Landing pages use the same ruby hierarchy as the Budgeting area. */
+.bms-unified-theme .workspace-panel .section-page {
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 18px 8px 24px;
+}
+
+.bms-unified-theme .workspace-panel .section-column {
+  gap: 16px;
+}
+
+.bms-unified-theme .workspace-panel .section-group {
+  padding: 14px 16px;
+  border: 1px solid var(--bms-border);
+  border-radius: 8px;
+  background: var(--bms-surface);
+}
+
+.bms-unified-theme .workspace-panel .section-group h2 {
+  margin: 0 0 10px;
+  color: var(--bms-ruby-800);
+  font-size: 15px;
+}
+
+.bms-unified-theme .workspace-panel .section-links {
+  gap: 5px;
+  /* Keep menu links visually subordinate to their group heading. */
+  padding-left: 16px;
+}
+
+.bms-unified-theme .workspace-panel .section-link {
+  width: 100%;
+  min-height: 32px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  color: var(--bms-text);
+}
+
+.bms-unified-theme .workspace-panel .section-link:hover,
+.bms-unified-theme .workspace-panel .section-link:focus-visible {
+  background: var(--bms-selection);
+  color: var(--bms-ruby-900);
+  text-decoration: none;
+}
+
+.bms-unified-theme .workspace-panel .section-lead .section-link:first-child {
+  padding: 7px 10px;
+  border: 1px solid var(--bms-border-strong);
+  background: var(--bms-surface-subtle);
+  color: var(--bms-ruby-800);
+  font-weight: 400;
+}
+
+.bms-unified-theme .workspace-panel .section-lead .section-link:first-child:hover,
+.bms-unified-theme .workspace-panel .section-lead .section-link:first-child:focus-visible {
+  background: var(--bms-selection);
+}
+
+/* Form fields and compact 25px action buttons share one visual treatment. */
+.bms-unified-theme .workspace-panel :is(input, select, textarea):not([type="checkbox"]):not([type="radio"]),
+.attachment-preview-dialog.bms-unified-theme select {
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid var(--bms-border);
+  border-radius: 6px;
+  background: var(--bms-surface);
+  color: var(--bms-text);
+  outline: 0;
+}
+
+.bms-unified-theme .workspace-panel :is(input, select, textarea):not([type="checkbox"]):not([type="radio"]):focus,
+.bms-unified-theme .workspace-panel :is(input, select, textarea):not([type="checkbox"]):not([type="radio"]):focus-visible,
+.attachment-preview-dialog.bms-unified-theme select:focus,
+.attachment-preview-dialog.bms-unified-theme select:focus-visible {
+  border-color: var(--bms-ruby-700);
+  box-shadow: 0 0 0 2px rgba(80, 80, 80, .14);
+  outline: 0;
+}
+
+.bms-unified-theme .workspace-panel :is(input, select, textarea):disabled,
+.attachment-preview-dialog.bms-unified-theme select:disabled {
+  border-color: var(--bms-border-soft);
+  background: var(--bms-disabled);
+  color: var(--bms-disabled-text);
+}
+
+.bms-unified-theme .workspace-panel input[type="checkbox"],
+.bms-unified-theme .workspace-panel input[type="radio"] {
+  accent-color: var(--bms-ruby-700);
+}
+
+.bms-unified-theme .workspace-panel :is(label, .directory-search, .list-filter-field,
+  .audit-filter-form label, .approval-matrix-filters label, .budget-execution-filters label,
+  .manual-deficits-page label, .closing-field) {
+  color: var(--bms-text-soft);
+}
+
+/* Approval comment height370: match the adjacent compact workflow buttons. */
+.bms-unified-theme .workspace-panel .workflow-command-list .workflow-approval-comment360 > input[type="text"] {
+  min-height: 25px;
+  height: 25px;
+  padding: 2px 8px;
+  line-height: 1.1;
+}
+/* End approval comment height370. */
+
+/* Preview dialogs are portalled to body; share controls without adding a fake
+   workspace container or changing native modal/focus behaviour. */
+.bms-unified-theme .workspace-panel :is(button, .primary-button, .secondary-button),
+.attachment-preview-dialog.bms-unified-theme button {
+  min-height: 25px;
+  height: 25px;
+  padding: 2px 8px;
+  border: 1px solid var(--bms-border);
+  border-radius: 6px;
+  background: var(--bms-surface);
+  color: var(--bms-text);
+  font: inherit;
+  line-height: 1.1;
+}
+
+.bms-unified-theme .workspace-panel :is(button, .primary-button, .secondary-button):hover:not(:disabled),
+.attachment-preview-dialog.bms-unified-theme button:hover:not(:disabled) {
+  border-color: var(--bms-border-strong);
+  background: var(--bms-selection);
+  color: var(--bms-ruby-900);
+}
+
+.bms-unified-theme .workspace-panel :is(button, .primary-button, .secondary-button):focus-visible,
+.attachment-preview-dialog.bms-unified-theme button:focus-visible {
+  border-color: var(--bms-ruby-700);
+  outline: 2px solid var(--bms-ruby-700);
+  outline-offset: 2px;
+}
+
+.bms-unified-theme .workspace-panel :is(.primary-button, .finance-primary,
+  .budget-primary-action, .manual-deficits-page button.primary,
+  button[type="submit"], .closing-actions button[type="submit"]) {
+  border-color: var(--bms-ruby-700);
+  background: var(--bms-ruby-700);
+  color: #fff;
+  font-weight: 650;
+}
+
+.bms-unified-theme .workspace-panel :is(.primary-button, .finance-primary,
+  .budget-primary-action, .manual-deficits-page button.primary,
+  button[type="submit"], .closing-actions button[type="submit"]):hover:not(:disabled) {
+  border-color: var(--bms-ruby-800);
+  background: var(--bms-ruby-800);
+  color: #fff;
+}
+
+.bms-unified-theme .workspace-panel :is(button, .primary-button, .secondary-button):disabled,
+.attachment-preview-dialog.bms-unified-theme button:disabled {
+  border-color: var(--bms-border-soft);
+  background: var(--bms-disabled);
+  color: var(--bms-disabled-text);
+}
+
+/* Semantic workflow colors also follow cancellation into the document toolbar.
+   Disabled controls intentionally keep the common muted palette above. */
+.bms-unified-theme .workspace-panel button:is(.primary-button, .secondary-button)[data-workflow-command="APPROVE"]:not(:disabled) {
+  background: #198754;
+  border-color: #198754;
+  color: #fff;
+}
+.bms-unified-theme .workspace-panel button:is(.primary-button, .secondary-button)[data-workflow-command="APPROVE"]:hover:not(:disabled),
+.bms-unified-theme .workspace-panel button:is(.primary-button, .secondary-button)[data-workflow-command="APPROVE"]:active:not(:disabled) {
+  background: #146c43;
+  border-color: #146c43;
+  color: #fff;
+}
+.bms-unified-theme .workspace-panel button:is(.primary-button, .secondary-button)[data-workflow-command="REJECT"]:not(:disabled),
+.bms-unified-theme .workspace-panel button:is(.primary-button, .secondary-button)[data-workflow-command="CANCEL"]:not(:disabled) {
+  background: #b4232a;
+  border-color: #b4232a;
+  color: #fff;
+}
+.bms-unified-theme .workspace-panel button:is(.primary-button, .secondary-button)[data-workflow-command="REJECT"]:hover:not(:disabled),
+.bms-unified-theme .workspace-panel button:is(.primary-button, .secondary-button)[data-workflow-command="REJECT"]:active:not(:disabled),
+.bms-unified-theme .workspace-panel button:is(.primary-button, .secondary-button)[data-workflow-command="CANCEL"]:hover:not(:disabled),
+.bms-unified-theme .workspace-panel button:is(.primary-button, .secondary-button)[data-workflow-command="CANCEL"]:active:not(:disabled) {
+  background: #971d24;
+  border-color: #971d24;
+  color: #fff;
+}
+
+/* Small/icon actions keep their compact footprint while sharing the palette. */
+.bms-unified-theme .workspace-panel :is(.icon-command, .row-action, .line-delete-button,
+  .directory-item-link, .request-link, .payment-calendar-open, .dated-calendar-open,
+  .active-accruals-open, .active-accruals-collapse) {
+  min-height: 25px;
+  height: 25px;
+  padding: 2px 7px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.bms-unified-theme .workspace-panel :is(.icon-command, .row-action, .line-delete-button) {
+  width: 25px;
+  min-width: 25px;
+  height: 25px;
+  min-height: 25px;
+  padding: 3px;
+}
+
+.bms-unified-theme .workspace-panel :is(.icon-command, .row-action, .line-delete-button,
+  .directory-item-link, .request-link, .payment-calendar-open, .dated-calendar-open,
+  .active-accruals-open, .active-accruals-collapse):hover:not(:disabled) {
+  border-color: var(--bms-border-strong);
+  background: var(--bms-selection);
+  color: var(--bms-ruby-900);
+}
+
+.bms-unified-theme .workspace-panel :is(.line-delete-button, .row-action)[aria-label^="Подтвердить"] {
+  border-color: var(--bms-border-strong);
+  background: var(--bms-surface-muted);
+  color: #a12721;
+}
+
+/* Sorting remains a plain header label, including hover/active states. */
+.bms-unified-theme .workspace-panel .request-grid thead th button.request-sort,
+.bms-unified-theme .workspace-panel .request-grid thead th button.request-sort:hover,
+.bms-unified-theme .workspace-panel .request-grid thead th button.request-sort:active {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+/* Cards, filters and form panels. */
+.bms-unified-theme .workspace-panel :is(.form-card, .cash-flow-settings,
+  .directory-create, .directory-scope, .directory-filters, .audit-filter-form,
+  .approval-matrix-routes section, .approval-matrix-filters,
+  .budget-execution-filters, .budget-execution-totals, .manual-deficit-detail,
+  .manual-deficit-filters, .active-accruals-filters, .active-accruals-totals,
+  .dated-calendar-filters, .dated-calendar-group, .dated-calendar-totals,
+  .payment-calendar-filters, .closing-panel, .closing-action-card,
+  .submission-preflight, .workflow-command-panel, .conditional-section,
+  .payment-details-panel, .payment-details-totals, .finance-filters,
+  .finance-preparation, .finance-selected, .notification-admin-controls) {
+  border: 1px solid var(--bms-border);
+  border-radius: 8px;
+  background: var(--bms-surface);
+}
+
+.bms-unified-theme .workspace-panel :is(.directory-create, .form-card,
+  .cash-flow-settings, .budget-execution-totals, .manual-deficit-detail,
+  .manual-deficit-filters, .active-accruals-filters, .active-accruals-totals,
+  .approval-matrix-routes section, .closing-panel, .closing-action-card,
+  .dated-calendar-group, .dated-calendar-totals,
+  .notification-admin-controls, .conditional-section,
+  .submission-preflight, .workflow-command-panel) {
+  padding: 14px;
+}
+
+.bms-unified-theme .workspace-panel :is(.directory-create, .form-card,
+  .cash-flow-settings, .budget-execution-totals, .manual-deficit-detail,
+  .approval-matrix-routes section, .closing-action-card, .conditional-section,
+  .submission-preflight, .workflow-command-panel) + * {
+  margin-top: 12px;
+}
+
+.bms-unified-theme .workspace-panel :is(.directory-create, .cash-flow-settings,
+  .budget-execution-filters, .dated-calendar-filters, .payment-calendar-filters,
+  .audit-filter-form, .approval-matrix-filters, .list-filter-fields,
+  .list-column-picker fieldset) {
+  background: var(--bms-surface-muted);
+}
+
+.bms-unified-theme .workspace-panel :is(.directory-toolbar, .list-toolbar,
+  .list-filter-fields, .list-column-picker fieldset) {
+  border: 1px solid var(--bms-border);
+  border-radius: 7px;
+  background: var(--bms-surface-muted);
+}
+
+.bms-unified-theme .workspace-panel .list-column-picker > summary {
+  color: var(--bms-ruby-800);
+}
+
+.bms-unified-theme .workspace-panel .list-column-picker > summary:hover,
+.bms-unified-theme .workspace-panel .list-column-picker > summary:focus-visible {
+  background: var(--bms-selection);
+  outline: 2px solid var(--bms-ruby-700);
+  outline-offset: 1px;
+}
+
+.bms-unified-theme .workspace-panel :is(.directory-create-header,
+  .closing-heading, .approval-matrix-heading, .lines-heading,
+  .submission-preflight-heading, .finance-selected-heading) {
+  gap: 12px;
+}
+
+.bms-unified-theme .workspace-panel :is(.directory-create-header h2,
+  .cash-flow-settings h2, .section-title, .closing-action-card h4,
+  .approval-matrix-routes h3, .finance-card-heading, .finance-workspace h2) {
+  color: var(--bms-ruby-900);
+}
+
+/* Notices retain semantic red/warning/success meaning but use the common shape. */
+.bms-unified-theme .workspace-panel :is(.notice, .directory-error,
+  .directory-navigation-notice, .finance-error, .payment-calendar-note,
+  .dated-calendar-note, .closing-message, .session-gate-error,
+  .list-filter-error, .history-error) {
+  border-radius: 6px;
+}
+
+.bms-unified-theme .workspace-panel :is(.notice.success, .finance-success,
+  .closing-message.success, .validation-message.accepted) {
+  border-color: var(--bms-border);
+  background: var(--bms-surface-muted);
+  color: #7a1020;
+}
+
+.bms-unified-theme .workspace-panel :is(.notice.warning, .payment-calendar-note,
+  .dated-calendar-note, .preflight-route, .preflight-group.data,
+  .closing-status) {
+  border-color: #d8c983;
+  background: #fffaf0;
+  color: #604f12;
+}
+
+/* A completed request command is success, not a ruby error-style notice. */
+.bms-unified-theme .workspace-panel .expense-request-form-page .notice.success {
+  color: #0f5132;
+  background: #d1e7dd;
+  border-color: #198754;
+}
+
+/* Shared table language. */
+.bms-unified-theme .workspace-panel :is(.directory-table-wrap, .request-grid-wrap,
+  .expense-table-wrap, .payment-calendar-table-wrap, .dated-calendar-table-wrap,
+  .approval-matrix-table-scroll, .budget-execution-table, .active-accruals-table-wrap,
+  .manual-deficit-table-wrap, .closing-table-wrap, .notification-table-scroll,
+  .notification-admin-scroll, .payment-details-table-scroll, .history-table-wrap,
+  .finance-table-scroll) {
+  overflow: auto;
+  border: 1px solid var(--bms-border);
+  border-radius: 7px;
+  background: var(--bms-surface);
+}
+
+.bms-unified-theme .workspace-panel :is(.directory-table, .request-grid,
+  .expense-table, .payment-calendar-table, .dated-calendar-page table,
+  .approval-matrix-table-scroll table, .budget-execution-page table,
+  .active-accruals-table, .manual-deficits-page table, .closing-table,
+  .notification-table, .notification-admin-scroll table, .payment-details-table,
+  .history-table, .finance-table-scroll table) {
+  border-collapse: collapse;
+  color: var(--bms-text);
+}
+
+.bms-unified-theme .workspace-panel :is(.directory-table th, .request-grid th,
+  .expense-table th, .payment-calendar-table thead th, .dated-calendar-page thead th,
+  .approval-matrix-table-scroll th, .budget-execution-page th, .active-accruals-table th,
+  .manual-deficits-page th, .closing-table th, .notification-table th,
+  .payment-details-table th, .history-table th, .finance-table-scroll th) {
+  background: var(--bms-header);
+  border-color: var(--bms-border-soft);
+  color: var(--bms-ruby-800);
+  font-weight: 650;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Some operational tables intentionally use a bare <table> or a local
+   class. Keep their headers aligned with the shared table language as well. */
+.bms-unified-theme .workspace-panel table th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.bms-unified-theme .workspace-panel :is(.directory-table th, .directory-table td,
+  .request-grid th, .request-grid td, .expense-table th, .expense-table td,
+  .payment-calendar-table th, .payment-calendar-table td,
+  .dated-calendar-page th, .dated-calendar-page td,
+  .approval-matrix-table-scroll th, .approval-matrix-table-scroll td,
+  .budget-execution-page th, .budget-execution-page td,
+  .active-accruals-table th, .active-accruals-table td,
+  .manual-deficits-page th, .manual-deficits-page td,
+  .closing-table th, .closing-table td, .notification-table th, .notification-table td,
+  .payment-details-table th, .payment-details-table td,
+  .history-table th, .history-table td, .finance-table-scroll th, .finance-table-scroll td) {
+  border-color: var(--bms-border-soft);
+  padding: 2px 6px;
+  vertical-align: middle;
+}
+
+.bms-unified-theme .workspace-panel .expense-table :is(th, td):last-child {
+  width: 29px;
+  min-width: 29px;
+  max-width: 29px;
+  padding-left: 2px;
+  padding-right: 2px;
+  text-align: center;
+}
+
+.bms-unified-theme .workspace-panel .budget-instance-workspace form .budget-instance-line-table .budget-instance-line-actions {
+  width: var(--budget-line-actions-width, 58px); min-width: var(--budget-line-actions-width, 58px); max-width: var(--budget-line-actions-width, 58px);
+  padding-left: 2px; padding-right: 2px; text-align: center;
+}
+.bms-unified-theme .workspace-panel .budget-instance-workspace form .budget-instance-line-table .budget-instance-row-actions :is(.line-copy-button, .line-delete-button) {
+  width: 25px; min-width: 25px; max-width: 25px;
+  height: 25px; min-height: 25px; max-height: 25px;
+  flex: 0 0 25px; margin: 0; padding: 3px;
+  display: inline-grid; place-items: center; box-sizing: border-box; line-height: 1;
+}
+
+/* Keep dense data-grid buttons aligned with every other action button. */
+.bms-unified-theme .workspace-panel :is(.directory-table, .request-grid,
+  .expense-table, .payment-calendar-table, .dated-calendar-page table,
+  .approval-matrix-table-scroll table, .budget-execution-page table,
+  .active-accruals-table, .manual-deficits-page table, .closing-table,
+  .notification-table, .notification-admin-scroll table, .payment-details-table,
+  .history-table, .finance-table-scroll table) td :is(button, .primary-button, .secondary-button) {
+  min-height: 25px;
+  height: 25px;
+  padding: 3px 8px;
+  line-height: 1.1;
+}
+
+/* A 29 px action column leaves exactly 2 px on either side of its 25 px button. */
+.bms-unified-theme .workspace-panel .expense-table td:last-child .row-action,
+.bms-unified-theme .workspace-panel .budget-instance-workspace form .budget-instance-line-table .budget-instance-line-actions .line-delete-button {
+  width: 25px;
+  min-width: 25px;
+  max-width: 25px;
+  height: 25px;
+  min-height: 25px;
+  max-height: 25px;
+  margin: 0 auto;
+  padding: 3px;
+  display: inline-grid;
+  place-items: center;
+  box-sizing: border-box;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.bms-unified-theme .workspace-panel .expense-table td:last-child .row-action svg,
+.bms-unified-theme .workspace-panel .budget-instance-workspace form .budget-instance-line-table .budget-instance-line-actions .line-delete-button svg {
+  display: block;
+  margin: 0;
+}
+
+.bms-unified-theme .workspace-panel :is(.directory-table tbody tr:nth-child(even),
+  .request-grid tbody tr:nth-child(even),
+  .payment-calendar-table tbody tr:not(.payment-calendar-organization):nth-child(even),
+  .dated-calendar-rows tbody tr:nth-child(even)) {
+  background: var(--bms-surface-subtle);
+}
+
+.directory-table .bms-openable-row { cursor: pointer; }
+.directory-table .bms-openable-row:hover > td,
+.directory-table .bms-openable-row:focus-visible > td {
+  background: #fff4c2;
+}
+.directory-table .bms-openable-row:focus-visible {
+  outline: 2px solid #a50920;
+  outline-offset: -2px;
+}
+
+.bms-unified-theme .workspace-panel :is(.directory-table caption,
+  .payment-calendar-table caption, .dated-calendar-page caption,
+  .closing-table caption, .finance-table-scroll caption, .manual-deficits-page caption) {
+  color: var(--bms-muted);
+  background: var(--bms-surface-muted);
+}
+
+/* Requested accent for the actuals command only; other controls stay neutral. */
+.bms-unified-theme .workspace-panel .budget-instance-workspace .budget-document-command-bar > .budget-copy-actuals-button {
+  font-weight: 700;
+}
+.bms-unified-theme .workspace-panel .budget-instance-workspace .budget-document-command-bar > .budget-copy-actuals-button:not(:disabled) {
+  background: #f8e6e9;
+  border-color: #d9aab3;
+  color: var(--bms-ruby-800);
+}
+.bms-unified-theme .workspace-panel .budget-instance-workspace .budget-document-command-bar > .budget-copy-actuals-button:hover:not(:disabled) {
+  background: #f2d7dd;
+  border-color: var(--bms-ruby-700);
+}
+
+/* Document forms and tabs follow the same ruby workflow treatment. */
+.bms-unified-theme .workspace-panel .document-heading {
+  margin-bottom: 12px;
+}
+
+.bms-unified-theme .workspace-panel .document-heading h1,
+.bms-unified-theme .workspace-panel .finance-heading h1 {
+  color: var(--bms-ruby-800);
+  font-weight: 650;
+}
+
+.bms-unified-theme .workspace-panel .command-bar {
+  min-height: 44px;
+  gap: 8px;
+  padding: 6px 0;
+  border-top: 1px solid var(--bms-border-soft);
+  border-bottom: 1px solid var(--bms-border);
+}
+
+.bms-unified-theme .workspace-panel .document-state {
+  border-color: var(--bms-border-strong);
+  background: var(--bms-selection);
+  color: var(--bms-ruby-800);
+}
+
+.bms-unified-theme .workspace-panel .status-dot {
+  background: var(--bms-ruby-600);
+}
+
+.bms-unified-theme .workspace-panel .document-state[data-status-tone="cfo-owner"] {
+  border-color: #fb923c;
+  background: #fff3e0;
+  color: #9a3412;
+}
+
+.bms-unified-theme .workspace-panel .document-state[data-status-tone="cfo-owner"] .status-dot {
+  background: #ea580c;
+}
+
+.bms-unified-theme .workspace-panel .document-tabs {
+  gap: 3px;
+  margin-top: 12px;
+  border-bottom: 1px solid var(--bms-border-strong);
+}
+
+.bms-unified-theme .workspace-panel .document-tabs button {
+  min-height: 25px;
+  height: 25px;
+  padding: 2px 8px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  border-radius: 6px 6px 0 0;
+  color: var(--bms-text-soft);
+}
+
+.bms-unified-theme .workspace-panel .document-tabs button:hover:not(:disabled),
+.bms-unified-theme .workspace-panel .document-tabs button.active {
+  border-color: var(--bms-border-strong);
+  background: var(--bms-selection);
+  color: var(--bms-ruby-900);
+}
+
+.bms-unified-theme .workspace-panel .document-tabs button.active {
+  background: var(--bms-header);
+  box-shadow: inset 0 -2px var(--bms-ruby-700);
+  font-weight: 650;
+}
+
+.bms-unified-theme .workspace-panel :is(.form-card, .expense-table-wrap,
+  .budget-table-wrap, .payment-details-table-scroll) {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .03);
+}
+
+.bms-unified-theme .workspace-panel :is(.currency-calculation:not(.pending),
+  .budget-total, .readiness-summary.ready, .budget-state.reserved,
+  .finance-status) {
+  border-color: var(--bms-border);
+  background: var(--bms-surface-muted);
+  color: #7a1020;
+}
+
+.bms-unified-theme .workspace-panel :is(.finance-toolbar, .finance-register-tools,
+  .finance-pagination) {
+  border-color: var(--bms-border-soft);
+  background: var(--bms-surface-muted);
+}
+
+.bms-unified-theme .workspace-panel .finance-tabs button[aria-pressed="true"] {
+  border-color: var(--bms-border-strong);
+  background: var(--bms-selection);
+  color: var(--bms-ruby-800);
+}
+
+/* Pagers and counts are deliberately quiet so the primary action remains
+   visually dominant. */
+.bms-unified-theme .workspace-panel :is(.directory-count, .directory-loading,
+  .directory-empty, .list-range, .list-summary, .list-filter-count,
+  .budget-execution-quiet, .budget-execution-pagination, .manual-deficit-pagination,
+  .payment-calendar-paging, .dated-calendar-paging, .finance-pagination) {
+  color: var(--bms-muted);
+}
+
+@media (max-width: 920px) {
+  .bms-unified-theme .workspace-panel .section-page {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 12px 0 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  .bms-unified-theme .workspace-panel :is(.directory-page, .list-page, .bdds-page,
+    .expense-request-form-page, .budget-execution-page, .payment-calendar-page,
+    .dated-calendar-page, .active-accruals-page, .manual-deficits-page,
+    .approval-matrix-page, .finance-workspace, .notification-administration) {
+    padding-bottom: 16px;
+  }
+
+  .bms-unified-theme .workspace-panel :is(.command-bar, .finance-form-actions,
+    .finance-filter-actions, .directory-actions) {
+    align-items: stretch;
+  }
+
+  .bms-unified-theme .workspace-panel :is(.command-bar > button,
+    .finance-form-actions > button, .finance-filter-actions > button) {
+    flex: 1 1 145px;
+  }
+}
+
+/* Section navigation is intentionally text-only.  Menu cards and menu items
+   should not look like forms or data-entry controls; the active/hover state
+   is communicated by the ruby text treatment instead of a frame. */
+.bms-unified-theme .workspace-panel .section-page :is(.section-group, .section-lead) {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.bms-unified-theme .workspace-panel .section-page .section-group {
+  padding: 0;
+}
+
+.bms-unified-theme .workspace-panel .section-page .section-link,
+.bms-unified-theme .workspace-panel .section-page .section-lead .section-link:first-child {
+  min-height: 22px;
+  height: 22px;
+  padding: 2px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.bms-unified-theme .workspace-panel .section-page .section-link:hover,
+.bms-unified-theme .workspace-panel .section-page .section-link:focus-visible,
+.bms-unified-theme .workspace-panel .section-page .section-lead .section-link:first-child:hover,
+.bms-unified-theme .workspace-panel .section-page .section-lead .section-link:first-child:focus-visible {
+  border: 0;
+  background: transparent;
+  color: var(--bms-ruby-900);
+  text-decoration: underline;
+}
+
+.bms-unified-theme .workspace-panel .section-page .section-link.primary,
+.bms-unified-theme .workspace-panel .section-page .section-lead .section-link:first-child {
+  color: var(--bms-text);
+  font-weight: 400;
+}
+
+.bms-unified-theme .workspace-panel .section-page .section-link.emphasized {
+  font-weight: 700;
+}
+
+/* Keep native accessible table names and printed captions, without repeating
+   the page heading as a visible strip above every screen table. */
+@media screen {
+  .bms-unified-theme .workspace-panel table > caption {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%);
+    white-space: nowrap; border: 0;
+  }
+}
+
+/* Whole-row navigation owns the visual affordance; the document number is plain text.
+   Keep the native button and its keyboard focus, and inherit cancelled-row strikethrough. */
+.bms-unified-theme .workspace-panel table.request-grid td button.request-link,
+.bms-unified-theme .workspace-panel table.request-grid td button.request-link:hover:not(:disabled),
+.bms-unified-theme .workspace-panel table.request-grid td button.request-link:active {
+  min-height: 0;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  line-height: inherit;
+  text-decoration: inherit;
+  box-shadow: none;
+}

@@ -1,0 +1,40 @@
+.expense-request-print-summary { display: none; }
+.expense-print-preparation { position: fixed; inset: 0; z-index: 3000; display: grid; place-items: center; padding: 24px; background: #0005; }
+.expense-print-preparation > div { width: min(600px,100%); }
+.expense-print-preparation button { margin: 6px 8px 0 0; }
+@media print {
+ @page bms-expense-request { size: A4 portrait; margin: 0; }
+ html:has(body > .expense-request-print-summary), body:has(> .expense-request-print-summary) { margin: 0 !important; padding: 0 !important; width: auto !important; height: auto !important; min-height: 0 !important; overflow: visible !important; background: white !important; }
+ body:has(> .expense-request-print-summary) > :not(.expense-request-print-summary) { display: none !important; }
+ body > .expense-request-print-summary { display: block !important; page: bms-expense-request; padding: 10mm; margin: 0; width: auto; max-width: none; box-sizing: border-box; color: #111; background: white; font: 8.5pt/1.2 Arial,sans-serif; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+ .expense-request-print-summary * { box-sizing: border-box; color: inherit; box-shadow: none; text-shadow: none; }
+ .expense-request-print-summary h1 { font-size: 14pt; line-height: 1.2; margin: 0 0 2mm; }
+ .expense-request-print-summary h2, .expense-request-print-summary caption { margin: 2mm 0 .5mm; font-size: 8.5pt; font-weight: 700; text-align: left; break-after: avoid; }
+ .expense-print-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 5mm; border-bottom: 2px solid #111; padding-bottom: 2mm; margin-bottom: 3mm; break-inside: avoid; }
+ .expense-print-header p { margin: 0 0 1mm; font-size: 8pt; }
+ .expense-print-header > strong { border: 1px solid #555; padding: 1mm 2mm; font-size: 8pt; max-width: 42mm; }
+ .expense-print-warning { border: 1px solid #777; padding: 2mm; font-size: 8pt; }
+ .expense-print-facts { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); margin: 0 0 2mm; border-top: 1px solid #777; border-left: 1px solid #777; }
+ .expense-print-facts > div { display: grid; grid-template-columns: 31mm minmax(0,1fr); border-right: 1px solid #777; border-bottom: 1px solid #777; break-inside: avoid; }
+ .expense-print-facts .print-field-wide { grid-column: 1 / -1; }
+ .expense-print-facts :is(dt,dd) { padding: 1.1mm 1.7mm; margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+ .expense-print-facts dt { font-size: 8pt; font-weight: 700; }
+ .expense-print-prose p { margin: 0 0 1mm; white-space: pre-wrap; overflow-wrap: anywhere; orphans: 3; widows: 3; }
+ .expense-request-print-summary table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: 0 0 3mm; font: inherit; }
+ .expense-request-print-summary thead { display: table-header-group; }
+ .expense-request-print-summary tfoot { display: table-row-group; font-weight: 700; }
+ .expense-request-print-summary :is(th,td) { border: 1px solid #777; padding: 1.5mm; vertical-align: top; overflow-wrap: anywhere; }
+ .expense-request-print-summary th { text-align: center; font-size: 8pt; }
+ .expense-request-print-summary tr { break-inside: avoid; }
+ .expense-request-print-summary .print-money { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+ .expense-request-print-summary td:first-child { text-align: center; }
+ .expense-request-print-summary tfoot th { text-align: right; }
+ .expense-print-lines small { display: block; margin-top: 1mm; font-size: 7.5pt; }
+ .print-col-index { width: 7mm; } .print-col-cfo { width: 33mm; } .print-col-period { width: 21mm; } .print-col-money { width: 31mm; }
+ .expense-print-budget { font-size: 8pt !important; }
+ .expense-print-budget th:first-child { width: 14mm; }
+ .expense-print-attachments ol { padding-left: 5mm; margin: 1mm 0; }
+ .expense-print-attachments li { margin-bottom: 1mm; overflow-wrap: anywhere; }
+ .expense-print-attachments li p { white-space: pre-wrap; margin: 0; }
+ .expense-print-attachments > p { margin: 1mm 0; }
+}

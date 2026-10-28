@@ -1,0 +1,24 @@
+.bms-unified-theme .workspace-panel .bdds-page button.bdds-fact-link { appearance: none; display: inline; padding: 0; margin: 0; border: 0; border-radius: 0; background: transparent; color: inherit; font: inherit; text-decoration: underline dotted; text-underline-offset: 3px; cursor: pointer; box-shadow: none; min-height: 0; }
+.bms-unified-theme .workspace-panel .bdds-page button.bdds-fact-link:hover { background: transparent; color: inherit; text-decoration-style: solid; }
+.bdds-fact-link:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.bdds-drill-page { padding: 0; }
+.bdds-drill-scope { margin: 0 0 12px; }
+.bdds-drill-table { width: 100%; min-width: 1100px; border-collapse: collapse; }
+.bdds-drill-table thead th { text-align: center; vertical-align: middle; }
+.bms-unified-theme .workspace-panel .bdds-drill-table button.bdds-drill-sort,
+.bms-unified-theme .workspace-panel .bdds-drill-table button.bdds-drill-sort:hover:not(:disabled),
+.bms-unified-theme .workspace-panel .bdds-drill-table button.bdds-drill-sort:active {
+  appearance: none; display: block; width: 100%; min-width: 0; min-height: 0; height: auto;
+  padding: 0; margin: 0; border: 0; border-radius: 0; background: transparent;
+  color: inherit; font: inherit; line-height: inherit; text-align: inherit;
+  box-shadow: none; transform: none; cursor: pointer; user-select: none;
+}
+.bdds-drill-sort:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.bdds-drill-table td { vertical-align: top; white-space: pre-wrap; overflow-wrap: anywhere; }
+.bdds-drill-table td:first-child, .bdds-drill-table td:nth-child(2), .bdds-drill-table td:nth-child(4) { white-space: nowrap; }
+.bdds-drill-table .bdds-drill-line { width: 56px; min-width: 48px; text-align: center; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.bdds-drill-table td:nth-child(7) { min-width: 280px; }
+.bdds-drill-table td:nth-child(8) { min-width: 130px; }
+.bdds-drill-table .bdds-drill-money { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.bdds-drill-table tfoot { background: #fff8cf; font-weight: 700; }
+.bdds-drill-pagination { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 12px; }

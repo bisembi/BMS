@@ -1,0 +1,77 @@
+<Project>
+  <PropertyGroup>
+    <BmsBuildFlavor>Production</BmsBuildFlavor>
+    <BmsBuildFlavor Condition="'$(BmsOwned419Acceptance)' == 'true' or $([System.String]::Copy('$(DefineConstants)').Contains('BMS_OWNED419_ACCEPTANCE'))">Acceptance419</BmsBuildFlavor>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Part of the DLL itself, not a removable sidecar or a current CLI flag. -->
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
+      <_Parameter1>BmsBuildFlavor</_Parameter1>
+      <_Parameter2>Production</_Parameter2>
+      <_Parameter2 Condition="'$(BmsOwned419Acceptance)' == 'true' or $([System.String]::Copy('$(DefineConstants)').Contains('BMS_OWNED419_ACCEPTANCE'))">Acceptance419</_Parameter2>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <UsingTask TaskName="BmsVerifyProductionAssemblyMetadata" TaskFactory="RoslynCodeTaskFactory"
+             AssemblyFile="$(MSBuildToolsPath)/Microsoft.Build.Tasks.Core.dll">
+    <ParameterGroup>
+      <AssemblyPaths ParameterType="Microsoft.Build.Framework.ITaskItem[]" Required="true" />
+    </ParameterGroup>
+    <Task>
+      <Reference Include="$(MSBuildToolsPath)/Sdks/Microsoft.NET.Sdk/tools/net472/System.Reflection.Metadata.dll" />
+      <Reference Include="$(MSBuildToolsPath)/Sdks/Microsoft.NET.Sdk/tools/net472/System.Collections.Immutable.dll" />
+      <Using Namespace="System" />
+      <Using Namespace="System.IO" />
+      <Using Namespace="System.Reflection.Metadata" />
+      <Using Namespace="System.Reflection.PortableExecutable" />
+      <Code Type="Fragment" Language="cs"><![CDATA[
+        foreach (var item in AssemblyPaths)
+        {
+            try
+            {
+                using (var stream = File.OpenRead(item.ItemSpec))
+                using (var pe = new PEReader(stream))
+                {
+                    var metadata = pe.GetMetadataReader();
+                    int flavorCount = 0;
+                    foreach (var handle in metadata.GetAssemblyDefinition().GetCustomAttributes())
+                    {
+                        var attribute = metadata.GetCustomAttribute(handle);
+                        if (attribute.Constructor.Kind != HandleKind.MemberReference) continue;
+                        var member = metadata.GetMemberReference((MemberReferenceHandle)attribute.Constructor);
+                        if (member.Parent.Kind != HandleKind.TypeReference) continue;
+                        var type = metadata.GetTypeReference((TypeReferenceHandle)member.Parent);
+                        if (metadata.GetString(type.Namespace) != "System.Reflection" ||
+                            metadata.GetString(type.Name) != "AssemblyMetadataAttribute") continue;
+                        var value = metadata.GetBlobReader(attribute.Value);
+                        if (value.ReadUInt16() != 1) throw new InvalidDataException("Invalid attribute prolog");
+                        if (value.ReadSerializedString() != "BmsBuildFlavor") continue;
+                        flavorCount++;
+                        if (value.ReadSerializedString() != "Production")
+                            throw new InvalidDataException("Acceptance binary is not deployable");
+                    }
+                    if (flavorCount != 1) throw new InvalidDataException("Exactly one production build marker required");
+                }
+            }
+            catch (Exception error)
+            {
+                Log.LogError("BMS_PUBLISH_NON_PRODUCTION_ASSEMBLY: {0}: {1}", item.ItemSpec, error.Message);
+            }
+        }
+        if (Log.HasLoggedErrors) return false;
+      ]]></Code>
+    </Task>
+  </UsingTask>
+
+  <Target Name="BmsRejectAcceptancePublish" BeforeTargets="PrepareForPublish;Publish">
+    <Error Condition="'$(BmsOwned419Acceptance)' == 'true' or $([System.String]::Copy('$(DefineConstants)').Contains('BMS_OWNED419_ACCEPTANCE'))" Text="BMS_ACCEPTANCE_PUBLISH_FORBIDDEN" />
+  </Target>
+  <Target Name="BmsVerifyProductionPublish" BeforeTargets="PrepareForPublish;Publish" DependsOnTargets="BmsRejectAcceptancePublish">
+    <ItemGroup>
+      <_BmsProductionAssembly Include="$(TargetPath)" />
+      <_BmsProductionAssembly Include="$(TargetDir)Bms.Application.dll;$(TargetDir)Bms.Domain.dll;$(TargetDir)Bms.Infrastructure.dll"
+                              Condition="'$(MSBuildProjectName)' == 'Bms.Api'" />
+    </ItemGroup>
+    <BmsVerifyProductionAssemblyMetadata AssemblyPaths="@(_BmsProductionAssembly)" />
+  </Target>
+</Project>

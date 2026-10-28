@@ -1,0 +1,39 @@
+.budget-instance-workspace .budget-unified-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 0 0 4px;
+}
+.budget-unified-toolbar > *, .budget-unified-toolbar button { flex: 0 0 auto; white-space: nowrap; }
+.budget-instance-workspace .budget-unified-toolbar > .document-save-state { margin-left: auto; padding-right: 0; text-align: right; }
+.budget-unified-primary { display: flex; align-items: center; }
+.budget-approval-compact:empty { display: none; }
+.budget-instance-workspace .workflow-command-list > .workflow-approval-comment360 {
+  min-width: 220px; max-width: 650px;
+}
+.budget-unified-toolbar button[aria-pressed="true"] { border-color: #9e0c24; color: #9e0c24; }
+.budget-unified-toolbar .budget-primary-action { background: #a70d27; color: white; border-color: #a70d27; font-weight: 600; }
+.budget-unified-toolbar .budget-primary-action:disabled { opacity: .5; }
+.budget-instance-workspace .budget-line-toolbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 3px;
+}
+.budget-line-toolbar button { white-space: nowrap; }
+.budget-document-heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 24px; margin: 0 0 6px; }
+.budget-instance-workspace .budget-document-heading h1 { margin: 0; font-size: 20px; line-height: 26px; }
+.budget-heading-cfo, .budget-heading-route { font-size: 12px; line-height: 18px; color: #54645c; }
+.budget-heading-status { font-size: 14px; line-height: 20px; }
+.budget-heading-route:empty { display: none; }
+.budget-instance-workspace .budget-instance-document-form { margin-top: 4px; gap: 4px; }
+.budget-instance-workspace .budget-instance-line-table textarea.budget-operation-input,
+.bms-unified-theme .workspace-panel .budget-instance-workspace .budget-instance-line-table textarea.budget-operation-input {
+  height: auto; min-height: 25px; max-height: none; overflow: hidden;
+  white-space: pre-wrap; overflow-wrap: anywhere; resize: none;
+}

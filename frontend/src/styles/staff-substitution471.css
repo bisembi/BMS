@@ -1,0 +1,11 @@
+.staff471 .list-toolbar {padding:6px}
+.staff471 .staff471-fields {display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:16px 24px;max-width:1040px}
+.staff471 .staff471-fields>label {display:flex;flex-direction:column;gap:7px}
+.staff471 .staff471-fields input:not([type=checkbox]),.staff471 .staff471-fields select {height:25px;min-height:25px;box-sizing:border-box}
+.staff471 .staff471-fields .staff471-indefinite {flex-direction:row;align-items:center;gap:8px}
+.staff471 .staff471-dates {display:flex;gap:16px}
+.staff471 .staff471-dates label {display:flex;flex-direction:column;gap:7px;flex:1;min-width:0}
+.staff471-news li {margin:8px 0}
+.staff471 .approve-button{background:#198754;color:#fff;border:1px solid #198754}
+.staff471 .reject-button{background:#bb2030;color:#fff;border:1px solid #bb2030}
+@media(max-width:720px){.staff471 .staff471-fields{grid-template-columns:minmax(0,1fr)}}

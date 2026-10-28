@@ -1,0 +1,40 @@
+.help-page { max-width: 1400px; min-width: 0; }
+.help-page h1, .help-page h2 { color: var(--ruby, #9b111e); }
+.help-page h1 { font-weight: 600; }
+.help-intro { margin: 10px 0 16px; color: #61656b; }
+.help-search { padding: 12px; margin-bottom: 16px; border: 1px solid #d7d9de; border-radius: 6px; background: #f2f2f2; }
+.help-search label { display: block; margin-bottom: 6px; }
+.help-search-controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.help-search-controls input { flex: 1 1 260px; width: 100%; min-width: 0; min-height: 34px; padding: 6px 9px; border: 1px solid #c7c9cd; border-radius: 4px; background: #fff; }
+.help-search-status { margin: 8px 0 0; color: #61656b; }
+.help-layout { display: grid; grid-template-columns: minmax(240px, 340px) minmax(0, 1fr); gap: 20px; align-items: start; }
+.help-tree { min-width: 0; border: 1px solid #d7d9de; border-radius: 6px; background: #fafafa; padding: 8px; max-height: 70vh; overflow: auto; }
+.help-tree ul { list-style: none; margin: 0; padding: 0; }
+.help-topic > ul { margin: 0 0 8px 12px; padding-left: 10px; border-left: 1px solid #c7c9cd; }
+.help-topic-toggle, .help-topic-label { display: flex; align-items: baseline; gap: 8px; width: 100%; padding: 8px; border: 0; background: transparent; color: var(--ruby, #9b111e); font-weight: 600; text-align: left; }
+.help-question { display: block; width: 100%; border: 0; border-radius: 3px; padding: 7px 8px; background: transparent; color: #30343b; text-align: left; overflow-wrap: anywhere; line-height: 1.4; }
+.help-topic-toggle:hover, .help-question:hover { background: #ececec; }
+.help-question[aria-current="page"] { background: #e5e5e5; color: var(--ruby, #9b111e); box-shadow: inset 3px 0 var(--ruby, #9b111e); }
+.help-page button:focus-visible, .help-page input:focus-visible { outline: 2px solid var(--ruby, #9b111e); outline-offset: 2px; }
+.help-answer { min-width: 0; padding: 20px; border: 1px solid #d7d9de; border-radius: 6px; background: #fff; overflow-wrap: anywhere; }
+.help-answer-topic { margin: 0 0 10px; color: #61656b; }
+.help-answer h2 { margin: 0 0 16px; font-size: 19px; line-height: 1.35; }
+.help-answer p { line-height: 1.65; }
+.help-answer p:last-child { margin-bottom: 0; }
+.help-empty { padding: 8px; line-height: 1.5; }
+/* Tree entries are text navigation, not the theme's fixed 25px grid actions. */
+.bms-unified-theme .workspace-panel .help-page :is(.help-topic-toggle, .help-question) {
+  height: auto; min-height: 32px; max-height: none; padding: 7px 8px;
+  border: 0; background: transparent; line-height: 1.4; white-space: normal;
+}
+.bms-unified-theme .workspace-panel .help-page .help-topic-toggle { color: var(--bms-ruby-800, #7a1020); font-weight: 600; }
+.bms-unified-theme .workspace-panel .help-page .help-question { color: #30343b; }
+.bms-unified-theme .workspace-panel .help-page :is(.help-topic-toggle, .help-question):hover { background: #ececec; }
+.bms-unified-theme .workspace-panel .help-page .help-question[aria-current="page"] {
+  background: #e5e5e5; color: var(--bms-ruby-800, #7a1020);
+}
+@media (max-width: 760px) {
+  .help-layout { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .help-tree { max-height: 38vh; }
+  .help-answer { padding: 14px; }
+}

@@ -1,0 +1,34 @@
+.attachment-panel .attachment-list li {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+.attachment-panel .attachment-list li > div:first-child {
+  flex: 1 1 20rem;
+  min-width: min(100%, 16rem);
+}
+.attachment-panel .attachment-actions {
+  flex: 0 1 auto;
+  min-width: 0;
+  justify-content: flex-start;
+}
+.attachment-panel .attachment-actions button {
+  flex: 0 0 auto;
+  max-width: 100%;
+  white-space: nowrap;
+}
+.attachment-panel .attachment-validation input[hidden] { display: none; }
+.attachment-panel .attachment-validation { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.attachment-panel > .lines-heading + .attachment-validation { margin-top: 12px; }
+.attachment-panel .attachment-validation > :is(.field.wide, .validation-message) { flex: 1 0 100%; }
+.attachment-panel .attachment-validation > .attachment-batch-queue {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+.attachment-panel .attachment-batch-queue > span {
+  width: auto;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}

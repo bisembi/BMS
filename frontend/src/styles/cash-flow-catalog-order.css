@@ -1,0 +1,35 @@
+.cash-flow-directory-table { min-width: 1392px; }
+.cash-flow-directory-table--editing { min-width: 1454px; }
+.cash-flow-directory-position-column { width: 48px; }
+.cash-flow-directory-table--reordering { min-width: 1456px; }
+.cash-flow-directory-table--reordering .cash-flow-directory-position-column { width: 112px; }
+.cash-flow-directory-table th:first-child { white-space: normal; overflow-wrap: normal; }
+.cash-flow-directory-name-column { width: 380px; }
+.cash-flow-directory-direction-column { width: 125px; }
+.cash-flow-directory-position-cell { text-align: right; white-space: nowrap; }
+.cash-flow-directory-table td.cash-flow-directory-position-cell,
+.bms-unified-theme .workspace-panel .cash-flow-directory-table td.cash-flow-directory-position-cell {
+  padding-left: 0; text-align: right;
+}
+.cash-flow-directory-move-controls { display: inline-flex; align-items: center; gap: 2px; margin-left: 4px; }
+.cash-flow-directory-move-controls button,
+.bms-unified-theme .workspace-panel .cash-flow-directory-table td .cash-flow-directory-move-controls button {
+  box-sizing: border-box; width: 25px; min-width: 25px; height: 25px;
+  min-height: 25px; padding: 2px; display: inline-flex; align-items: center;
+  justify-content: center; line-height: 1;
+}
+.cash-flow-directory-move-controls button[draggable="true"] { cursor: grab; }
+.cash-flow-drop-before > td { box-shadow: inset 0 3px #1760a0; }
+.cash-flow-drop-after > td { box-shadow: inset 0 -3px #1760a0; }
+.cash-flow-order-position-editor { display: inline-flex; flex-direction: column; }
+.cash-flow-directory-move-controls .cash-flow-order-position-input,
+.bms-unified-theme .workspace-panel .cash-flow-directory-table td .cash-flow-order-position-input {
+  box-sizing: border-box; width: 45px; min-width: 45px; height: 25px; min-height: 25px;
+  padding: 2px 4px; text-align: right;
+}
+.cash-flow-order-position-error { font-size: 10px; color: #b00020; }
+.cash-flow-order-notice { margin: 8px 0; }
+.cash-flow-order-notice button { margin-left: 8px; }
+.cash-flow-directory-filters { align-items: flex-end; flex-wrap: wrap; }
+.cash-flow-directory-filters label { display: flex; flex-direction: column; gap: 3px; }
+.cash-flow-directory-filters select { width: 240px; max-width: 100%; }

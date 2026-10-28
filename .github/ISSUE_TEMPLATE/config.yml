@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Конфиденциальное сообщение об уязвимости
+    url: https://github.com/bisembi/BMS/security/policy
+    about: Следуйте SECURITY.md; не раскрывайте детали эксплуатации в публичных issues.
+  - name: Установка и известные ограничения
+    url: https://github.com/bisembi/BMS/blob/main/docs/INSTALLATION.md
+    about: Проверьте документацию до создания обращения. Гарантированный SLA поддержки не предоставляется.

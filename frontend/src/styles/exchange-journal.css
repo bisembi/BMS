@@ -1,0 +1,27 @@
+.exchange-filters, .exchange-toolbar, .exchange-summary {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
+}
+.exchange-filters { align-items: flex-end; padding: 10px 12px; background: var(--bms-header, #f2f2f2); border: 1px solid #d7d7d7; border-radius: 8px; margin-bottom: 10px; }
+.exchange-filters label { display: grid; gap: 4px; }
+.exchange-filters input, .exchange-filters select { width: 190px; }
+.exchange-toolbar { margin: 8px 0; }
+.exchange-toolbar label { display: inline-flex; align-items: center; gap: 6px; }
+.exchange-toolbar select { width: auto; }
+.exchange-summary { padding: 10px 12px; border: 1px solid #d7d7d7; border-radius: 8px; margin-bottom: 10px; font-size: .92em; }
+.exchange-summary small { flex-basis: 100%; color: #666; }
+.exchange-table-wrap { overflow: auto; border: 1px solid #d7d7d7; border-radius: 8px; }
+.exchange-table { width: 100%; min-width: 1000px; border-collapse: collapse; }
+.exchange-table caption { text-align: left; color: #666; padding: 8px 10px; font-size: .9em; }
+.exchange-table th, .exchange-table td { border: 1px solid #e3e3e3; padding: 6px 8px; vertical-align: top; }
+.exchange-table th { text-align: center; color: var(--bms-ruby-800, #7a1020); background: #f2f2f2; }
+.exchange-table td:nth-child(1), .exchange-table td:nth-child(2), .exchange-table td.numeric { white-space: nowrap; }
+.exchange-table td.numeric { text-align: right; }
+.exchange-table tbody tr:nth-child(even) { background: #fafafa; }
+.exchange-status { white-space: nowrap; padding: 2px 8px; border: 1px solid #b8c2cc; border-radius: 12px; }
+.exchange-status-success { color: #136b38; background: #e4f8eb; border-color: #8dcda4; }
+.exchange-status-failed { color: #aa1020; background: #fff0f0; border-color: #df9da4; }
+.exchange-status-running { color: #6d580b; background: #fff8d6; border-color: #ddc869; }
+.exchange-status-warning { color: #77520a; background: #fff6d8; border-color: #d9bd67; }
+.exchange-detail { margin-top: 14px; border: 1px solid #d7d7d7; border-radius: 8px; padding: 12px; }
+.exchange-detail h2 { font-size: 1.1rem; margin: 0 12px 0 0; color: var(--bms-ruby-800, #7a1020); }
+.exchange-detail p { margin: 8px 0; }

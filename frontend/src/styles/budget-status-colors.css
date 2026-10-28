@@ -1,0 +1,27 @@
+.budget-instance-list .budget-status-label.budget-status-approved {
+  color: #15713a;
+  font-weight: 700;
+}
+
+.budget-instance-list .budget-status-label.budget-status-pending {
+  color: #1756b3;
+  font-weight: 700;
+}
+
+.budget-instance-list .budget-status-label.budget-status-returned {
+  color: #b01625;
+  font-weight: 400;
+}
+
+.budget-instance-list .budget-status-detail {
+  color: #000;
+  font-weight: 400;
+}
+
+.budget-instance-list .budget-instance-versions {
+  font-size: calc(1em - 1pt);
+}
+
+.budget-instance-list .budget-instance-versions > span {
+  display: block;
+}

@@ -1,0 +1,100 @@
+.bdds-page { padding: 20px; color: #1f2735; }
+.bdds-page h1 { margin: 0 0 16px; }
+.bdds-toolbar { display: flex; gap: 10px; align-items: end; flex-wrap: wrap; margin-bottom: 10px; }
+.bdds-toolbar-primary, .bdds-toolbar-secondary { display: flex; flex: 1 0 100%; min-width: 0; gap: 12px; align-items: end; flex-wrap: wrap; }
+.bdds-toolbar-secondary { align-items: center; }
+.bdds-toolbar-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.bdds-toolbar label { display: grid; gap: 4px; min-width: 300px; }
+.bdds-toolbar .bdds-period { min-width: 150px; }
+.bdds-toolbar .bdds-actuals-choice { display: flex; align-items: center; min-width: 0; min-height: 25px; gap: 6px; }
+.bdds-actuals-choice input { margin: 0; }
+.bdds-fact-year { display: flex; align-items: center; gap: 10px; min-height: 25px; }
+.bdds-toolbar .bdds-fact-year label { display: flex; align-items: center; min-width: 0; gap: 4px; }
+.bdds-toolbar .bdds-fact-year input { width: auto; min-width: 0; margin: 0; }
+.bdds-table-wrap { overflow-x: auto; border: 1px solid #b9c8d8; border-radius: 8px; }
+.bdds-top-scroll { margin: 0 1px 3px; height: 18px; overflow-x: auto; overflow-y: hidden; }
+.bdds-top-scroll[hidden] { display: none; }
+.bdds-scroll-spacer { height: 1px; }
+@media print { .bdds-top-scroll { display: none; } }
+.bdds-table { border-collapse: collapse; table-layout: fixed; min-width: 1970px; width: 1970px; font-size: calc(13px - 1pt); line-height: 19px; }
+.bdds-table .bdds-name-column { width: 350px; }
+.bdds-table .bdds-cfo-column { width: 70px; }
+.bdds-table tr { height: 20px; }
+.bdds-table th, .bdds-table td { border: 1px solid #b9c8d8; height: 20px; padding: 0 8px; white-space: nowrap; vertical-align: middle; }
+.bdds-table thead tr { height: 32px; }
+.bdds-table thead th { height: 32px; padding: 3px 8px; background: #285b87; color: #fff; text-align: center; vertical-align: middle; line-height: 14px; }
+.bdds-table thead th:first-child { width: 350px; min-width: 350px; max-width: 350px; box-sizing: border-box; position: sticky; left: 0; z-index: 2; }
+.bdds-table thead small { display: block; font-size: calc(9px - 1pt); line-height: 8px; color: #fff7a3; }
+.bdds-table thead small.bdds-plan-label { font-size: 9px; line-height: 11px; }
+.bdds-table thead small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bdds-version-pages { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.bdds-table tbody th { width: 350px; min-width: 350px; max-width: 350px; box-sizing: border-box; text-align: left; position: sticky; left: 0; z-index: 1; }
+.bdds-table th:first-child,
+.bms-unified-theme .workspace-panel .bdds-table th:first-child { text-align: left; }
+/* Collapsed table borders can scroll away from sticky cells; paint the divider on the cell too. */
+.bdds-table th:first-child { border-right: 2px solid #527797; box-shadow: inset -2px 0 0 #527797; }
+.bdds-table .bdds-block-start { border-left: 2px solid #527797; }
+.bdds-table .bdds-block-end { border-right: 2px solid #527797; }
+.bdds-table tbody td { min-width: 86px; text-align: right; font-variant-numeric: tabular-nums; }
+.bdds-table .bdds-cfo-cell { width: 70px; min-width: 70px; max-width: 70px; box-sizing: border-box; text-align: center; overflow: hidden; text-overflow: ellipsis; }
+.bdds-table .bdds-label { display: block; min-width: 0; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* The hierarchy marker must not add to the requested text inset. */
+.bdds-table .bdds-toggle > [aria-hidden="true"] { order: 1; flex: 0 0 auto; margin-left: auto; }
+.bdds-table .bdds-toggle .bdds-label { flex: 1 1 auto; }
+/* Hierarchy toggles are inline labels, not the shared 25px command buttons. */
+.bdds-table .bdds-toggle,
+.bms-unified-theme .workspace-panel .bdds-table .bdds-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 19px;
+  min-height: 0;
+  max-height: 19px;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: inherit;
+  line-height: 19px;
+  text-align: left;
+  vertical-align: middle;
+}
+.bdds-table .bdds-toggle:hover:not(:disabled),
+.bms-unified-theme .workspace-panel .bdds-table .bdds-toggle:hover:not(:disabled) {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-decoration: underline;
+}
+.bdds-table .bdds-toggle:focus-visible,
+.bms-unified-theme .workspace-panel .bdds-table .bdds-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
+}
+.bdds-activity th, .bdds-activity td { background: #173b5c; color: #fff; font-weight: 700; }
+.bdds-section th, .bdds-section td { background: #c7dbee; font-weight: 700; }
+.bdds-group th, .bdds-group td { background: #dce7f3; font-weight: 700; }
+.bdds-table .bdds-activity th { padding-left: 0; }
+.bdds-table .bdds-section th,
+.bdds-table .bdds-group th { padding-left: 3px; }
+.bdds-table .bdds-article th { padding-left: 5px; }
+.bdds-table .bdds-channel th { padding-left: 12px; }
+.bdds-table .bdds-channel-article th { padding-left: 20px; }
+.bdds-article th { background: #fff; font-weight: 400; }
+.bdds-article td { background: #fff; }
+.bdds-net th, .bdds-net td { background: #f7c9a9; font-weight: 700; }
+.bdds-table thead .bdds-total { background: #204b70; }
+.bdds-table .bdds-activity .bdds-total { background: #102c45; }
+.bdds-table .bdds-section .bdds-total { background: #adc6e0; }
+.bdds-table .bdds-group .bdds-total { background: #c1d4e7; }
+.bdds-table .bdds-article .bdds-total { background: #e8eef5; }
+.bdds-table .bdds-net .bdds-total { background: #eeb58f; }
+.bdds-table .bdds-negative { color: #c00000; }
+.bdds-table .bdds-activity .bdds-negative { color: #fff; }
+.bdds-controls { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px; font-variant-numeric: tabular-nums; }

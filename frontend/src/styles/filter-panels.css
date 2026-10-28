@@ -1,0 +1,334 @@
+/* Shared filter template measured from Budget Execution: 34px fields,
+   12.32px labels/values, 25px actions, 14px padding, 12px gaps, gray surface.
+   Explicit filter roots exclude document editors, tables, pagers and commands.
+   Repeated workspace class gives this template priority over page-local rules
+   regardless of lazy stylesheet loading order, without priority flags. */
+.bms-unified-theme .workspace-panel.workspace-panel :is(
+  .budget-execution-filters, .directory-filters, .active-accruals-filters,
+  .bdds-toolbar, .unbudgeted-articles-filters, .dated-calendar-filters,
+  .payment-calendar-filters, .manual-deficit-filters, .finance-filters,
+  .audit-filter-form, .approval-matrix-filters, .change-journal-filters,
+  .directory-toolbar, .directory-scope, .list-filter-panel, .help-search,
+  .directory-search:not(.directory-toolbar .directory-search)
+) {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  padding: 14px;
+  padding-block: var(--bms-filter-padding-block, 14px);
+  gap: 12px;
+  border: 1px solid var(--bms-border);
+  border-radius: 8px;
+  background: var(--bms-surface-muted);
+  --bms-filter-font: 12.32px;
+}
+
+.bms-unified-theme .workspace-panel.workspace-panel :is(
+  .budget-execution-filters, .directory-filters, .active-accruals-filters,
+  .bdds-toolbar, .unbudgeted-articles-filters, .dated-calendar-filters,
+  .payment-calendar-filters, .manual-deficit-filters, .finance-filters,
+  .audit-filter-form, .approval-matrix-filters, .change-journal-filters,
+  .directory-toolbar, .directory-scope, .list-filter-panel, .help-search
+) label,
+.bms-unified-theme .workspace-panel.workspace-panel .directory-search {
+  min-width: 0;
+  max-width: 100%;
+  gap: 6px;
+  font-size: var(--bms-filter-font, 12.32px);
+  line-height: 18px;
+  color: var(--bms-text-soft);
+}
+
+/* Keep checkbox/radio choices inline; field labels remain above their inputs. */
+.bms-unified-theme .workspace-panel.workspace-panel :is(
+  .budget-execution-filters, .directory-filters, .active-accruals-filters,
+  .bdds-toolbar, .unbudgeted-articles-filters, .dated-calendar-filters,
+  .payment-calendar-filters, .manual-deficit-filters, .finance-filters,
+  .audit-filter-form, .approval-matrix-filters, .change-journal-filters,
+  .directory-toolbar, .directory-scope, .list-filter-panel, .help-search
+) label:has(input, select):not(:has(input[type="checkbox"], input[type="radio"])) {
+  display: flex;
+  flex-direction: column;
+}
+
+.bms-unified-theme .workspace-panel.workspace-panel :is(
+  .budget-execution-filters, .directory-filters, .active-accruals-filters,
+  .bdds-toolbar, .unbudgeted-articles-filters, .dated-calendar-filters,
+  .payment-calendar-filters, .manual-deficit-filters, .finance-filters,
+  .audit-filter-form, .approval-matrix-filters, .change-journal-filters,
+  .directory-toolbar, .directory-scope, .list-filter-panel, .help-search,
+  .directory-search:not(.directory-toolbar .directory-search)
+) :is(input, select):not([type="checkbox"]):not([type="radio"]) {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  height: 34px;
+  min-height: 34px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-size: var(--bms-filter-font, 12.32px);
+  line-height: normal;
+}
+
+.bms-unified-theme .workspace-panel.workspace-panel :is(
+  .budget-execution-filters, .directory-filters, .active-accruals-filters,
+  .bdds-toolbar, .unbudgeted-articles-filters, .dated-calendar-filters,
+  .payment-calendar-filters, .manual-deficit-filters, .finance-filters,
+  .audit-filter-form, .approval-matrix-filters, .change-journal-filters,
+  .directory-toolbar, .directory-scope, .list-filter-panel, .help-search
+) button {
+  height: 25px;
+  min-height: 25px;
+  padding: 2px 8px;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+.bms-unified-theme .workspace-panel.workspace-panel :is(
+  .directory-filters, .bdds-toolbar, .unbudgeted-articles-filters,
+  .budget-execution-filters, .directory-toolbar, .directory-scope-fields,
+  .audit-filter-form, .approval-matrix-filters, .change-journal-filters,
+  .payment-calendar-filters, .manual-deficit-filters
+) { align-items: end; flex-wrap: wrap; }
+
+.bms-unified-theme .workspace-panel.workspace-panel :is(
+  .budget-execution-filters, .directory-filters, .active-accruals-filters,
+  .bdds-toolbar, .unbudgeted-articles-filters, .dated-calendar-filters,
+  .payment-calendar-filters, .manual-deficit-filters, .finance-filters,
+  .audit-filter-form, .approval-matrix-filters, .change-journal-filters,
+  .directory-toolbar, .directory-scope, .list-filter-panel, .help-search
+) label:has(input[type="checkbox"], input[type="radio"]) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 25px;
+  width: auto;
+}
+.bms-unified-theme .workspace-panel.workspace-panel :is(
+  .budget-execution-filters, .directory-filters, .active-accruals-filters,
+  .bdds-toolbar, .unbudgeted-articles-filters, .dated-calendar-filters,
+  .payment-calendar-filters, .manual-deficit-filters, .finance-filters,
+  .audit-filter-form, .approval-matrix-filters, .change-journal-filters,
+  .directory-toolbar, .directory-scope, .list-filter-panel, .help-search
+) :is(input[type="checkbox"], input[type="radio"]) {
+  width: 13px;
+  height: 13px;
+  min-height: 13px;
+  min-width: 13px;
+  padding: 0;
+  margin: 0;
+  flex: 0 0 13px;
+}
+
+/* Size fields rather than stretching three budget-list filters across the page. */
+.bms-unified-theme .workspace-panel.workspace-panel .budget-instance-workspace .directory-filters > .directory-filter-actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
+  gap: 8px;
+  max-width: 100%;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .directory-filter-actions > button {
+  flex: 0 0 auto;
+  width: auto;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .directory-filters > label {
+  flex: 0 1 280px;
+  width: 280px;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .bdds-toolbar {
+  --bms-filter-padding-block: 10px;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .bdds-toolbar-primary > label {
+  flex: 0 1 300px;
+  width: 300px;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .bdds-toolbar .bdds-period-range {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  flex: 0 1 390px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+  gap: 12px;
+  border: 1px solid var(--bms-border);
+  border-radius: 6px;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .bdds-period-range legend {
+  position: absolute;
+  top: -9px;
+  left: 10px;
+  padding: 0 4px;
+  font-size: var(--bms-filter-font, 12.32px);
+  line-height: 18px;
+  background: var(--bms-surface-muted);
+  color: var(--bms-text-soft);
+}
+.bms-unified-theme .workspace-panel.workspace-panel .bdds-period-range > label {
+  width: auto;
+  min-width: 0;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .bdds-toolbar .bdds-period-range > label.bdds-period {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .bdds-toolbar-actions {
+  flex: 0 0 auto;
+  max-width: 100%;
+  min-height: 34px;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .bdds-toolbar-actions > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--bms-filter-font, 12.32px);
+  line-height: 18px;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .bdds-toolbar .bdds-toolbar-secondary :is(.bdds-actuals-choice, .bdds-fact-year, .bdds-fact-year > label) {
+  min-height: 34px;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .bdds-period-range input[type="month"]::-webkit-datetime-edit {
+  padding: 0;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .cash-flow-directory-filters,
+.bms-unified-theme .workspace-panel.workspace-panel .finance-filter-grid {
+  gap: 12px;
+}
+/* The outer expense-filter panel owns the surface, avoiding a second gray card. */
+.bms-unified-theme .workspace-panel.workspace-panel .list-filter-panel .list-filter-fields {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  gap: 12px;
+}
+@media (max-width: 640px) {
+  .bms-unified-theme .workspace-panel.workspace-panel .bdds-toolbar .bdds-period-range {
+    flex-basis: 100%;
+    width: 100%;
+  }
+  .bms-unified-theme .workspace-panel.workspace-panel :is(.directory-filters, .bdds-toolbar-primary) > label:not(.bdds-actuals-choice) {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}
+
+/* Intrinsic action widths and bounded fields, not full-width grid tracks.
+   Wrapping is driven by available space; no forced action-only row. */
+.bms-unified-theme .workspace-panel.workspace-panel :is(
+  .budget-execution-filters, .active-accruals-filters, .directory-filters,
+  .dated-calendar-filters, .payment-calendar-filters, .audit-filter-form
+) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+}
+.bms-unified-theme .workspace-panel.workspace-panel :is(
+  .budget-execution-filters, .active-accruals-filters,
+  .dated-calendar-filters, .payment-calendar-filters, .audit-filter-form
+) > label:not(:has(input[type="checkbox"], input[type="radio"])) {
+  flex: 0 1 220px;
+  width: 220px;
+}
+.bms-unified-theme .workspace-panel.workspace-panel :is(
+  .budget-execution-filters, .active-accruals-filters,
+  .dated-calendar-filters, .payment-calendar-filters, .currency-rate-filters
+) > label:has(input[type="date"], input[type="month"]) {
+  flex: 0 1 170px;
+  width: 170px;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .budget-execution-filters > label:last-of-type {
+  flex-basis: 280px;
+  width: 280px;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .dated-calendar-filters > label:has(#dated-currency) {
+  flex-basis: 120px;
+  width: 120px;
+}
+.bms-unified-theme .workspace-panel.workspace-panel :is(
+  .compact-filter-actions, .budget-execution-filter-actions,
+  .audit-filter-actions, .finance-filter-actions
+) {
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  max-width: 100%;
+  margin: 0;
+}
+.bms-unified-theme .workspace-panel.workspace-panel :is(
+  .budget-execution-filters, .active-accruals-filters, .directory-filters,
+  .dated-calendar-filters, .payment-calendar-filters, .manual-deficit-filters,
+  .audit-filter-form, .finance-filters
+) button {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+  align-self: end;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .finance-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .finance-filters > .finance-card-heading {
+  flex: 0 0 100%;
+  margin: 0;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .finance-filter-grid {
+  display: contents;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .finance-filter-grid > label {
+  flex: 0 1 220px;
+  width: 220px;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .finance-filter-grid > label:has(input[type="date"]) {
+  flex-basis: 170px;
+  width: 170px;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .directory-scope-fields > .field {
+  flex: 0 1 300px;
+  width: 300px;
+  min-width: 0;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .directory-scope-fields > .field:has(.cash-flow-combobox-trigger) {
+  display: flex;
+  flex-direction: column;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .directory-scope-fields > .field .cash-flow-combobox-trigger {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  height: 34px;
+  min-height: 34px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-size: var(--bms-filter-font, 12.32px);
+  background: var(--bms-surface, #fff);
+}
+.bms-unified-theme .workspace-panel.workspace-panel .manual-deficit-filters {
+  flex-direction: row;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .manual-deficit-filters > label {
+  margin: 0;
+}
+.bms-unified-theme .workspace-panel.workspace-panel .manual-deficit-filters > label:first-of-type {
+  flex: 0 1 280px;
+  width: 280px;
+}
+@media (max-width: 640px) {
+  .bms-unified-theme .workspace-panel.workspace-panel :is(
+    .budget-execution-filters, .active-accruals-filters, .dated-calendar-filters,
+    .payment-calendar-filters, .audit-filter-form, .finance-filter-grid
+  ) > label:not(:has(input[type="checkbox"], input[type="radio"])) {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}

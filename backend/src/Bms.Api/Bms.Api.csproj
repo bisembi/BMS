@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RuntimeFrameworkVersion>10.0.13</RuntimeFrameworkVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bms.Application\Bms.Application.csproj" />
+    <ProjectReference Include="..\Bms.Infrastructure\Bms.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\..\frontend\src\assets\guides\bms-expense-requests-guide-20261019.pdf"
+                      LogicalName="Bms.Api.Guides.ExpenseRequests20261019.pdf" />
+    <EmbeddedResource Include="..\..\..\frontend\src\assets\guides\bms-budget-filling-guide-20261019.pdf"
+                      LogicalName="Bms.Api.Guides.BudgetFilling20261019.pdf" />
+    <Content Update="appsettings.Development.json"
+             CopyToPublishDirectory="Never" />
+    <Content Update="appsettings.Staging.json"
+             CopyToOutputDirectory="PreserveNewest"
+             CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

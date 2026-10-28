@@ -1,0 +1,31 @@
+.cost-center-editor .cost-center-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.cost-center-editor .cost-center-actions button {
+  flex: 0 0 auto;
+  width: auto;
+}
+.cost-center-editor .cost-center-actions .cost-center-save:not(:disabled),
+.bms-unified-theme .workspace-panel .cost-center-editor .cost-center-actions button.cost-center-save:not(:disabled) {
+  background: #198754;
+  border-color: #198754;
+  color: #fff;
+}
+.cost-center-editor .cost-center-actions .cost-center-cancel:not(:disabled),
+.bms-unified-theme .workspace-panel .cost-center-editor .cost-center-actions button.cost-center-cancel:not(:disabled) {
+  background: #b4232a;
+  border-color: #b4232a;
+  color: #fff;
+}
+.bms-unified-theme .workspace-panel .cost-center-editor .cost-center-actions button.cost-center-save:hover:not(:disabled) {
+  background: #146c43;
+  border-color: #146c43;
+}
+.bms-unified-theme .workspace-panel .cost-center-editor .cost-center-actions button.cost-center-cancel:hover:not(:disabled) {
+  background: #971d24;
+  border-color: #971d24;
+}

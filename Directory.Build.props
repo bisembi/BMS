@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!-- Opt-in, isolated acceptance binary. Never enable for a publish. -->
+    <DefineConstants Condition="'$(BmsOwned419Acceptance)' == 'true'">$(DefineConstants);BMS_OWNED419_ACCEPTANCE</DefineConstants>
+    <BaseOutputPath Condition="'$(BmsOwned419Acceptance)' == 'true' or $([System.String]::Copy('$(DefineConstants)').Contains('BMS_OWNED419_ACCEPTANCE'))">bin/acceptance419/</BaseOutputPath>
+    <BaseIntermediateOutputPath Condition="'$(BmsOwned419Acceptance)' == 'true' or $([System.String]::Copy('$(DefineConstants)').Contains('BMS_OWNED419_ACCEPTANCE'))">obj/acceptance419/</BaseIntermediateOutputPath>
+    <DefaultItemExcludes>$(DefaultItemExcludes);bin/**;obj/**</DefaultItemExcludes>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+</Project>

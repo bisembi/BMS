@@ -1,0 +1,32 @@
+.payment-register-page .register-timestamp { margin: 10px 0; color: #777; font-size: 12px; }
+.payment-register-table-wrap { overflow-x: auto; }
+.payment-register-table { border-collapse: collapse; table-layout: fixed; width: 100%; min-width: 1050px; }
+.payment-register-table col:nth-child(1) { width: 16%; }.payment-register-table col:nth-child(2) { width: 10%; }
+.payment-register-table col:nth-child(3) { width: 12%; }.payment-register-table col:nth-child(4) { width: 14%; }
+.payment-register-table col:nth-child(5) { width: 22%; }.payment-register-table col:nth-child(6),.payment-register-table col:nth-child(7) { width: 13%; }
+.payment-register-table th,.payment-register-table td { border: 1px solid #ddd; padding: 7px 8px; vertical-align: top; white-space: normal; overflow-wrap: anywhere; }
+.payment-register-table thead th { text-align: center; vertical-align: middle; background: #f2f2f2; color: #8f1021; }
+.payment-register-table .register-money { text-align: right; font-variant-numeric: tabular-nums; }
+.payment-register-table .register-date { text-align: center; }
+.payment-register-table tfoot th,.payment-register-table tfoot td { font-weight: 700; background: #fff8cb; }
+.payment-register-table tfoot th { text-align: right; }
+@media print {
+  @page bms-payment-register { size: A4 landscape; margin: 10mm; }
+  html:has(.payment-register-page),body:has(.payment-register-page),body:has(.payment-register-page) #root { height: auto !important; overflow: visible !important; background: white !important; }
+  body:has(.payment-register-page) .app-shell { display: block !important; height: auto !important; min-height: 0 !important; background: #fff !important; }
+  body:has(.payment-register-page) .topbar,body:has(.payment-register-page) .sidebar,body:has(.payment-register-page) .workspace-tab-strip,
+  .payment-register-page .register-actions { display: none !important; }
+  body:has(.payment-register-page) .main-area,body:has(.payment-register-page) .workspace-panel,body:has(.payment-register-page) .workspace-view-cache {
+    display: block !important; height: auto !important; min-height: 0 !important; max-height: none !important; overflow: visible !important; padding: 0 !important; margin: 0 !important; background: #fff !important;
+  }
+  body:has(.payment-register-page) .workspace-view-cache[hidden] { display: none !important; }
+  .payment-register-page { page: bms-payment-register; color: #111; font: 9pt/1.3 Arial,sans-serif; background: #fff !important; }
+  .payment-register-page .document-heading,.payment-register-page h1 { position: static !important; transform: none !important; }
+  .payment-register-page h1 { color: #111 !important; font-size: 16pt; margin-bottom: 4mm; }
+  .payment-register-table-wrap { overflow: visible; }
+  .payment-register-table { width: 100% !important; min-width: 0 !important; font-size: 9pt !important; }
+  .payment-register-table th,.payment-register-table td { padding: 2mm; border-color: #777; color: #111 !important; }
+  .payment-register-table thead { display: table-header-group; position: static !important; top: auto !important; transform: none !important; }
+  .payment-register-table tfoot { display: table-row-group; }
+  .payment-register-table tr { break-inside: avoid; page-break-inside: avoid; }
+}

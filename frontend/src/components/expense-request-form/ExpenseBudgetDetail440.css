@@ -1,0 +1,28 @@
+.expense-budget-link440 { color: #135aa5; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+.expense-budget-link440:focus-visible { outline: 2px solid #135aa5; outline-offset: 2px; }
+.expense-budget-detail440 { margin-top: 12px; outline-offset: 3px; }
+.expense-budget-detail440-heading, .expense-budget-detail440-heading > div { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.expense-budget-detail440 h2 { margin: 0; font-size: 17px; color: #9b111e; }
+.expense-budget-detail440 h3 { font-size: 15px; color: #9b111e; margin: 16px 0 8px; }
+.expense-budget-detail440-summary { display: flex; flex-wrap: wrap; gap: 12px 32px; margin: 12px 0; }
+.expense-budget-detail440-summary dt { color: #6d7380; }
+.expense-budget-detail440-summary dd { margin: 4px 0 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.expense-budget-detail440-scroll { overflow-x: auto; }
+.expense-budget-detail440 table { width: 100%; border-collapse: collapse; }
+.expense-budget-detail440 th, .expense-budget-detail440 td { box-sizing: border-box; height: 25px; padding: 0 8px; line-height: 20px; vertical-align: middle; border: 1px solid #e1e3e5; white-space: nowrap; }
+.expense-budget-detail440 th { text-align: center; color: #9b111e; background: #f3f3f3; }
+.expense-budget-detail440 .money { text-align: right; font-variant-numeric: tabular-nums; }
+.expense-budget-detail440 tfoot td, .expense-budget-detail440 tfoot th { background: #fff8d0; font-weight: 600; }
+.expense-budget-detail440 nav { display: flex; align-items: center; gap: 10px; margin: 8px 0; }
+
+/* Only the request's budget explanation; other drills retain their typography. */
+.expense-budget-explanation444-panel { font-size: calc(1rem - 1pt); }
+.expense-budget-detail440.expense-budget-explanation444-panel h2 { font-size: calc(17px - 1pt); }
+.expense-budget-explanation444-panel .section-hint { font-size: calc(11px - 1pt); }
+.expense-budget-detail440 .expense-budget-explanation444-table { table-layout: fixed; min-width: 940px; }
+.expense-budget-explanation444-table .expense-budget-date444 { width: 165px; }
+.expense-budget-explanation444-table .expense-budget-number444 { width: 150px; }
+.expense-budget-explanation444-table .expense-budget-money444 { width: 185px; }
+.expense-budget-explanation444-table td { overflow: hidden; text-overflow: ellipsis; }
+.expense-budget-detail440 .expense-budget-total444 > th,
+.expense-budget-detail440 .expense-budget-total444 > td { background: #f3f3f3; }

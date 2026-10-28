@@ -1,0 +1,61 @@
+.expense-table.has-inline-budget { min-width: 1635px; }
+.expense-table.no-accrual-columns { min-width: 1120px; }
+.expense-table thead th { text-align: center; vertical-align: middle; height: 42px; line-height: 1.2; white-space: normal; }
+.expense-table thead th br { display: block; }
+.expense-table.has-inline-budget .expense-col-cash-flow { width: 285px; }
+.expense-table.has-inline-budget .expense-col-cost-center { width: 215px; }
+.expense-table.has-inline-budget .expense-col-period { width: 160px; }
+.expense-table.has-inline-budget .expense-col-amount { width: 140px; }
+.expense-table.has-inline-budget .expense-col-budget { width: 140px; }
+.expense-table.has-inline-budget .expense-col-vat-rate { width: 100px; }
+.expense-table.has-inline-budget .expense-col-vat-amount { width: 130px; }
+.expense-table.has-inline-budget .expense-col-net-amount { width: 140px; }
+.expense-table .inline-budget-cell { text-align: right; white-space: nowrap; background: #fff; }
+.expense-table .inline-budget-cell.is-over-budget { color: #a20b20; }
+.expense-table .budget-input-hint { display: block; white-space: normal; overflow-wrap: anywhere; font-size: 11px; line-height: 1.2; text-align: left; color: #777; }
+.expense-table .expense-col-verdict { width: 110px; }
+.expense-table .inline-budget-status { background: #fff; text-align: center; white-space: nowrap; }
+.line-budget-verdict.over { color: #e00000; font-weight: 700; }
+.line-budget-verdict.within { color: #23723a; }
+
+/* One 25px control box and one text baseline in the request's Expenses tab.
+   The section ID intentionally outranks shared theme/read-view rules without
+   changing other forms, approval allocation tables, popup lists or totals. */
+#expense-panel-lines .expense-table tbody td {
+  padding: 4px 6px;
+  vertical-align: middle;
+  line-height: 19px;
+}
+#expense-panel-lines .expense-table tbody td :is(input, select, .cash-flow-combobox-trigger, .expense-view-cell) {
+  box-sizing: border-box;
+  min-height: 25px;
+  height: 25px;
+  max-height: 25px;
+  margin-block: 0;
+  padding: 2px 10px;
+  font: inherit;
+  line-height: 19px;
+}
+#expense-panel-lines .expense-table tbody td :is(input, select, .expense-view-cell) {
+  display: block;
+}
+#expense-panel-lines .expense-table .cash-flow-combobox-trigger {
+  display: flex;
+  align-items: center;
+}
+#expense-panel-lines .expense-table .expense-view-cell:not(.expense-view-amount) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#expense-panel-lines .expense-table tbody td output,
+#expense-panel-lines .expense-table .line-budget-verdict {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 25px;
+  line-height: 19px;
+}
+#expense-panel-lines .expense-table .inline-budget-status .line-budget-verdict {
+  justify-content: center;
+}

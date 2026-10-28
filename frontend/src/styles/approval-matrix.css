@@ -1,0 +1,29 @@
+.approval-matrix-page { min-width: 0; padding: 20px; }
+.approval-matrix-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.approval-matrix-heading h1 { margin: 0; }
+.approval-matrix-page h2 { margin: 24px 0 12px; font-size: 1rem; }
+.approval-matrix-note { color: #59616d; line-height: 1.55; max-width: 1000px; }
+.approval-matrix-routes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.approval-matrix-routes section { border: 1px solid #d9e0e7; border-radius: 6px; padding: 14px; background: #f7f9fc; }
+.approval-matrix-routes h3 { font-size: .95rem; margin: 0 0 10px; }
+.approval-matrix-routes ol { padding-left: 20px; margin: 0; }
+.approval-matrix-routes li { padding: 3px 0; }
+.approval-matrix-filters { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: end; margin-bottom: 14px; }
+.approval-matrix-filters label { display: grid; gap: 5px; font-size: .875rem; }
+.approval-matrix-filters select { min-width: 180px; max-width: 100%; padding: 6px 8px; }
+.approval-matrix-filters p { margin: 0 0 6px; color: #59616d; }
+.approval-matrix-page button { min-height: 32px; padding: 5px 12px; }
+.approval-matrix-table-scroll { max-width: 100%; overflow-x: auto; border: 1px solid #d9e0e7; border-radius: 5px; }
+.approval-matrix-table-scroll table { width: 100%; min-width: 900px; border-collapse: collapse; font-size: .875rem; }
+.approval-matrix-table-scroll caption { text-align: left; padding: 10px 12px; color: #59616d; }
+.approval-matrix-table-scroll th { background: #edf1f6; text-align: left; }
+.approval-matrix-table-scroll th, .approval-matrix-table-scroll td { border-bottom: 1px solid #e2e6eb; padding: 9px 12px; vertical-align: top; }
+.approval-matrix-table-scroll tbody tr:last-child td { border-bottom: 0; }
+.approval-matrix-table-scroll:focus-visible { outline: 2px solid #416994; outline-offset: 2px; }
+@media (max-width: 700px) {
+  .approval-matrix-page { padding: 14px; }
+  .approval-matrix-heading { align-items: start; flex-wrap: wrap; }
+  .approval-matrix-routes { grid-template-columns: 1fr; }
+  .approval-matrix-filters label { width: 100%; min-width: 0; }
+  .approval-matrix-filters select { min-width: 0; width: 100%; }
+}

@@ -1,0 +1,12 @@
+.business-trip-employees { max-width: 780px; }
+.business-trip-employee-list { display: grid; gap: 10px; margin: 0 0 12px; padding-left: 24px; }
+.business-trip-employee-list li { padding-left: 4px; }
+.business-trip-employee-editor { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: end; }
+.business-trip-employee-editor .field { min-width: 0; margin: 0; }
+.business-trip-employee-editor .field input { width: 100%; min-width: 0; }
+.business-trip-employee-editor > button { margin-bottom: 1px; }
+.business-trip-employee-list .expense-view-value { overflow-wrap: anywhere; }
+@media (max-width: 560px) {
+  .business-trip-employee-editor { gap: 6px; }
+  .business-trip-employee-list { padding-left: 20px; }
+}

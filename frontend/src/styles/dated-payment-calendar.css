@@ -1,0 +1,30 @@
+.dated-calendar-page { display: flex; flex-direction: column; min-width: 0; gap: 12px; }
+.dated-calendar-page h1, .dated-calendar-page h2, .dated-calendar-page h3, .dated-calendar-page p { margin: 0; }
+.dated-calendar-page h1, .dated-calendar-page h2 { font-size: 20px; }
+.dated-calendar-page h3 { font-size: 15px; }
+.dated-calendar-page p { line-height: 1.5; }
+.dated-calendar-help, .dated-calendar-period, .dated-calendar-export { color: #525d6a; font-size: 12px; }
+.dated-calendar-filters { display: grid; grid-template-columns: auto minmax(145px, 1fr) auto minmax(145px, 1fr) auto minmax(145px, 1fr); gap: 8px; align-items: center; background: #f5f6f7; padding: 12px; border: 1px solid #d7dce2; }
+.dated-calendar-filters input, .dated-calendar-filters select { width: 100%; min-width: 0; height: 32px; border: 1px solid #aeb8c4; background: white; padding: 4px 8px; }
+.dated-calendar-page button { min-height: 30px; padding: 5px 10px; border: 1px solid #b1bac5; background: #f8f9fa; color: #24354c; cursor: pointer; border-radius: 3px; }
+.dated-calendar-page button:disabled { opacity: 0.5; cursor: not-allowed; }
+.dated-calendar-page button:hover:not(:disabled) { background: #fff4bf; }
+.dated-calendar-page :focus-visible { outline: 2px solid #3b6eb3; outline-offset: 2px; }
+.dated-calendar-export, .dated-calendar-paging { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.dated-calendar-totals { display: grid; gap: 8px; }
+.dated-calendar-table-wrap { max-width: 100%; overflow-x: auto; border: 1px solid #ccd3dc; }
+.dated-calendar-page table { border-collapse: collapse; width: 100%; font-size: 12px; background: white; }
+.dated-calendar-page caption { text-align: left; padding: 8px 10px; background: #edf2f7; font-weight: 600; }
+.dated-calendar-page th, .dated-calendar-page td { border: 1px solid #dce1e7; padding: 7px 9px; vertical-align: top; }
+.dated-calendar-page thead th { text-align: center; background: #f1f3f6; white-space: nowrap; }
+.dated-calendar-page tbody th { text-align: left; }
+.dated-calendar-totals td, .dated-calendar-money { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.dated-calendar-totals tbody tr { background: #fff9de; }
+.dated-calendar-rows { min-width: 1400px; }
+.dated-calendar-rows tbody tr:nth-child(even) { background: #f8fafc; }
+.dated-calendar-rows td:first-child { white-space: nowrap; }
+.dated-calendar-purpose { white-space: pre-wrap; min-width: 180px; overflow-wrap: anywhere; }
+.dated-calendar-note { padding: 8px; background: #fff5de; border: 1px solid #dbc28d; }
+.dated-calendar-group { display: grid; gap: 8px; border-left: 3px solid #6b86a6; padding: 10px; background: #f5f8fb; }
+.dated-calendar-page .dated-calendar-open { color: #0759a8; background: transparent; border: none; text-decoration: underline; }
+@media (max-width: 900px) { .dated-calendar-filters { grid-template-columns: auto minmax(0, 1fr); } }

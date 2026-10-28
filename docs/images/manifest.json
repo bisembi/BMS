@@ -1,0 +1,168 @@
+{
+  "snapshot": "catalog485",
+  "syntheticData": true,
+  "realCompanyData": false,
+  "backendAcceptance": false,
+  "files": [
+    {
+      "file": "01-workspace.png",
+      "caption": "Рабочая область и переключатель роли",
+      "bytes": 37315,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "118151828665E1D6765ADA88C1194F670ADB63E17ECF62A730F12E9FE7453FA1"
+    },
+    {
+      "file": "02-requests.png",
+      "caption": "Список вымышленных заявок",
+      "bytes": 67680,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "38417F4913D7200D45D0129591CC779B7DE32700714DDCA963EE3D76993AC40C"
+    },
+    {
+      "file": "03-request-filters.png",
+      "caption": "Фильтры списка заявок",
+      "bytes": 81098,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "53C5BF08A2CA9303CBF10D610353E6E040D5AAFAB450EC211D3B431FA3315CCB"
+    },
+    {
+      "file": "04-tasks.png",
+      "caption": "Задача на согласование",
+      "bytes": 48267,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "07D6244D3656402EF99ACEC2F47BA26B3A552FC381B61F6B156A1B77926519B6"
+    },
+    {
+      "file": "05-budget-list.png",
+      "caption": "Утверждённый учебный бюджет ЦФО",
+      "bytes": 52686,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "9A269BD937B6448706FFB5036358ADEB5530423AD9E6249EC4B841DACF3EF5DF"
+    },
+    {
+      "file": "06-organizations.png",
+      "caption": "Нейтральный учебный справочник организаций",
+      "bytes": 40182,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "9325CB89D9D90582DA29D714EA48E307947F59233273AC926CFD233A155CF984"
+    },
+    {
+      "file": "07-expense-items.png",
+      "caption": "Отдельный справочник статей затрат",
+      "bytes": 46391,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "C283A4D30EFB86D8E36B3D7898EBAE52E208D19A6AB48AB44C2705D50F4B1F08"
+    },
+    {
+      "file": "08-request-main.png",
+      "caption": "Основное новой заявки",
+      "bytes": 76796,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "A128A469F4EF6DC91BFE6E75D08DE25C4019BDFD5E7597048166DDD9D54C75E2"
+    },
+    {
+      "file": "14-counterparty.png",
+      "caption": "Выбор контрагента и основания",
+      "bytes": 56835,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "B5631127552ABF09FAB31C4F01888E6EBC9488ED6504A2A220DEBDCDF9C4964C"
+    },
+    {
+      "file": "15-expenses.png",
+      "caption": "Вкладка расходов: структура ввода",
+      "bytes": 69155,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "B74FC6229F82B3A6BED8D4D69F34421A679D7CFE9ED6B7D95F0C8E3244C38387"
+    },
+    {
+      "file": "09-versions.png",
+      "caption": "Действующая версия компании",
+      "bytes": 45593,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "9EA73D5274201E2B2CAB48FBC6BC35D2CBD2A575660A553F01D05C0370181440"
+    },
+    {
+      "file": "10-debtors.png",
+      "caption": "Текущие оплаченные незакрытые заявки",
+      "bytes": 73619,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "ED274B983973F017FC3A919C377AB6581D2D9F3BD8123CA5326C665F0F7A08D5"
+    },
+    {
+      "file": "11-help.png",
+      "caption": "Дерево встроенной помощи",
+      "bytes": 93428,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "C4F43EDEE9BE21DDD80D41E79820BDC082B4BDC14D0F9F3252020130C73FFAC1"
+    },
+    {
+      "file": "12-active-accruals.png",
+      "caption": "Не закрытый учебный акрул: 116 000 тенге",
+      "bytes": 73187,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "FEA435B2201C2C61583C6EC4F66AB216EDE87261C0E4A12BFB42B4472DC4822F"
+    },
+    {
+      "file": "13-departments.png",
+      "caption": "Учебное подразделение",
+      "bytes": 42409,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "FE8FBC84E3434C4CF9F236DAB69F03EAD03490165890467050CBD863EEA86A7E"
+    },
+    {
+      "file": "16-closing.png",
+      "caption": "Закрытие оплаченной заявки под ролью ответственного бухгалтера",
+      "bytes": 81927,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "42B02E26946C460AAC04E234AA6C3B78DE426F0E369D8E960DF75D647D84AF72"
+    },
+    {
+      "file": "17-paid-request.png",
+      "caption": "Оплаченная заявка: режим чтения",
+      "bytes": 72317,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "99ACD0D9020EC2A0CE4C5B11E20CFFE94133B31A159C118A55513FF07A1FA6F2"
+    },
+    {
+      "file": "18-paid-expenses.png",
+      "caption": "Строка оплаченной заявки: НДС, период, подразделение и маршрут",
+      "bytes": 76530,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "0E53FB08837B13225CBB68819342313B9D457650C4E2662AA0B2CEA43CAA2C7F"
+    },
+    {
+      "file": "19-payment.png",
+      "caption": "Учебное подтверждение оплаты: обязательство и остаток",
+      "bytes": 65807,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "54B66FD440E93F65D669368F165B0E25030822ECF57DBDEF923D6DD323B7B68F"
+    },
+    {
+      "file": "20-substitutions.png",
+      "caption": "Учебное подтверждённое замещение",
+      "bytes": 42472,
+      "width": 1600,
+      "height": 1060,
+      "sha256": "B44A5E7254F1BAC78C46CFD9CEC845E6D30F13230861FDEE825554B25E87A12E"
+    }
+  ]
+}

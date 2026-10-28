@@ -1,0 +1,457 @@
+{
+  "manifestVersion": 1,
+  "databaseName": "provided-by-installer-with-ownership-marker",
+  "schemaName": "bms_web",
+  "firstVersion": 1,
+  "lastVersion": 61,
+  "scriptCount": 60,
+  "scripts": [
+    {
+      "version": 1,
+      "fileName": "001_bootstrap_bms_web.sql",
+      "sha256": "B486C7AFBBC035BA5B8EB60C220614C02B01B688BE4C213D9E2BD101C2D8CAE4",
+      "byteLength": 11316,
+      "lineCount": 220
+    },
+    {
+      "version": 2,
+      "fileName": "002_budget_projection.sql",
+      "sha256": "FF07CC3E8A070DF104F1010F7F2702C702055E2F5A9E0EAD8703E7E555C45673",
+      "byteLength": 32400,
+      "lineCount": 636
+    },
+    {
+      "version": 3,
+      "fileName": "003_access_scope.sql",
+      "sha256": "CAA9C69DF22C2C34D196A3E4BFBE2946FDC5FEEE2A9A4CC2BB661722F498A5AD",
+      "byteLength": 11166,
+      "lineCount": 254
+    },
+    {
+      "version": 4,
+      "fileName": "004_workflow_matrix.sql",
+      "sha256": "7498ECBA6FF02325882C8D90F1AD7983BC6107363A5CE7154130EEC534A5D22C",
+      "byteLength": 20938,
+      "lineCount": 437
+    },
+    {
+      "version": 5,
+      "fileName": "005_expense_request_evidence.sql",
+      "sha256": "C209C116E6F6F93787DE5E63CAC8574C5184169D05193FFA33034FFF3991FD5B",
+      "byteLength": 14292,
+      "lineCount": 266
+    },
+    {
+      "version": 6,
+      "fileName": "006_expense_request_copy_source.sql",
+      "sha256": "9CCE30B26B5D499D471D86EE07995BF7A46EE43D0AA4B7B888F663597AF5B50C",
+      "byteLength": 9498,
+      "lineCount": 231
+    },
+    {
+      "version": 7,
+      "fileName": "007_expense_request_line_order.sql",
+      "sha256": "F112BFF2418D2ACC638A33444F5A160200E00A6B94B32651BEC915F9887442EE",
+      "byteLength": 8026,
+      "lineCount": 204
+    },
+    {
+      "version": 8,
+      "fileName": "008_actor_idempotency_collation.sql",
+      "sha256": "D940979C2D65732D87973CA4D71AC7DE6756305C33D909212644F88D79A0ABA8",
+      "byteLength": 68508,
+      "lineCount": 1239
+    },
+    {
+      "version": 9,
+      "fileName": "009_cash_flow_items_accrual_source.sql",
+      "sha256": "5F7D9063A09A0E6C2EA431ED9C8ED7E5E73444CE87A25A37F62470E615D44A27",
+      "byteLength": 14449,
+      "lineCount": 314
+    },
+    {
+      "version": 10,
+      "fileName": "010_expense_items_accrual_mapping.sql",
+      "sha256": "0ABA8DB6A1233FB6D0E30D2567E5F5EEE8F6F29BFEF2E5531DAD3FF7D873A9FE",
+      "byteLength": 8663,
+      "lineCount": 208
+    },
+    {
+      "version": 11,
+      "fileName": "011_expense_request_line_accrual_snapshot.sql",
+      "sha256": "E95EC0F8B551652321417AD4E2B45DCC48716ED84E58E39CAA5C7D0367AE0F56",
+      "byteLength": 11754,
+      "lineCount": 293
+    },
+    {
+      "version": 12,
+      "fileName": "012_money_decimal18_scale2.sql",
+      "sha256": "64B0267CC939C6DA8302909BB80208F396A98EC30926906CD9B8FDF868A1633F",
+      "byteLength": 37780,
+      "lineCount": 840
+    },
+    {
+      "version": 13,
+      "fileName": "013_counterparties_reference.sql",
+      "sha256": "D309D034453CE72FBFDAF2439183A6A939AD35B7772C3CF8A675D8D47EB49166",
+      "byteLength": 9671,
+      "lineCount": 230
+    },
+    {
+      "version": 14,
+      "fileName": "014_contracts_reference.sql",
+      "sha256": "19A134C7DA744E57BF5AA5BFAC49B96B73A432A41A71395D66BF7C54B14B5AAC",
+      "byteLength": 10997,
+      "lineCount": 250
+    },
+    {
+      "version": 15,
+      "fileName": "015_employee_functional_roles.sql",
+      "sha256": "573219863B54F91F7B65C7910775CAEC8466DDBD7A17104DDAFE487351884A27",
+      "byteLength": 21080,
+      "lineCount": 445
+    },
+    {
+      "version": 16,
+      "fileName": "016_currencies_and_daily_rates.sql",
+      "sha256": "21DE2D883B6816DDE31D493B6357FEB8975C7E9C596CB0A4CD36BED1C87B4B2B",
+      "byteLength": 18365,
+      "lineCount": 407
+    },
+    {
+      "version": 17,
+      "fileName": "017_expense_request_currency_rate_snapshot.sql",
+      "sha256": "B90B82306029A1888AD69EF03CDD011D3171D7FAA444B40A5A6D527276791084",
+      "byteLength": 12641,
+      "lineCount": 299
+    },
+    {
+      "version": 18,
+      "fileName": "018_expense_request_line_currency_conversion.sql",
+      "sha256": "8A0916F29971ADC2DCD10E7E1AA28A00D725C8441235670D2042A019B9005F47",
+      "byteLength": 18557,
+      "lineCount": 429
+    },
+    {
+      "version": 19,
+      "fileName": "019_overpayment_deficit_storage.sql",
+      "sha256": "43C8C7171F1B958B2D201B76D1C693C80CE7C9CE319B5E8FD90B90D94D1B3882",
+      "byteLength": 43966,
+      "lineCount": 728
+    },
+    {
+      "version": 20,
+      "fileName": "020_treasury_payment_overpayment_storage.sql",
+      "sha256": "FDF67F931C922AC442F86C72445E8FE6DBCA5186F02BC47AF64F094634DC2710",
+      "byteLength": 34048,
+      "lineCount": 620
+    },
+    {
+      "version": 21,
+      "fileName": "021_budget_owner_cost_center_assignments.sql",
+      "sha256": "54EFE0F110917B7EBD6B7AE18A8D67D2B68685FF7AAACF1C23076FC7C1B11389",
+      "byteLength": 14659,
+      "lineCount": 325
+    },
+    {
+      "version": 22,
+      "fileName": "022_expense_request_approval_route_snapshots.sql",
+      "sha256": "36BDDE3A97C8751A3B9831F336EC0CF0A225A38A2FA48777BA87C6FF365EF3A6",
+      "byteLength": 24008,
+      "lineCount": 422
+    },
+    {
+      "version": 23,
+      "fileName": "023_employee_actor_mappings.sql",
+      "sha256": "FCC3033C4C397D99C2E040366C2AFFDBBABA8DE580330581C8BFA0E680DC9909",
+      "byteLength": 15687,
+      "lineCount": 350
+    },
+    {
+      "version": 24,
+      "fileName": "024_expense_request_workflow_activation.sql",
+      "sha256": "0D8712B90FDBE30FE21B4DDF0EFE74F884A10B385B8706C5C1A8B8E605A83B47",
+      "byteLength": 23338,
+      "lineCount": 505
+    },
+    {
+      "version": 25,
+      "fileName": "025_expense_request_accrual_closing_cycles.sql",
+      "sha256": "C9F194133FCBF2DBD5E58323545134038C374C5DDC842EC11A91A9B984305B5E",
+      "byteLength": 28517,
+      "lineCount": 479
+    },
+    {
+      "version": 26,
+      "fileName": "026_expense_request_closing_activation.sql",
+      "sha256": "D5735C9969FC427F21DB4326CC5CB4A5968AC1B3C80C4FCFE865614004470B13",
+      "byteLength": 20797,
+      "lineCount": 406
+    },
+    {
+      "version": 27,
+      "fileName": "027_accrual_red_zone_notifications.sql",
+      "sha256": "CA6350A18911B040C20A406EB72DCCDEA8C39CF601F828568655D39942A185A4",
+      "byteLength": 26929,
+      "lineCount": 424
+    },
+    {
+      "version": 28,
+      "fileName": "028_cash_flow_accrual_settings_version.sql",
+      "sha256": "6B8B67D10C2FB7EE9DF476E279069ECCE57C0C50D2E4EF660C58CCEA8EF1760C",
+      "byteLength": 9165,
+      "lineCount": 171
+    },
+    {
+      "version": 29,
+      "fileName": "029_expense_request_substitutions.sql",
+      "sha256": "FF7BA331F373F791E48E0042529CA51EF34C3526A0AC1831FB27E6486558E0FD",
+      "byteLength": 18400,
+      "lineCount": 403
+    },
+    {
+      "version": 30,
+      "fileName": "030_expense_request_task_scope_index.sql",
+      "sha256": "D36073183A3C5ED2BD0A52A08E538E2F85A6C00E0E123939C19AF950B798AD9C",
+      "byteLength": 8084,
+      "lineCount": 190
+    },
+    {
+      "version": 31,
+      "fileName": "031_expense_request_attachments.sql",
+      "sha256": "416811517D27691264AC73821E546799D80A7D73D155449C296523656D0DCCC1",
+      "byteLength": 25639,
+      "lineCount": 550
+    },
+    {
+      "version": 32,
+      "fileName": "032_budget_instance_draft.sql",
+      "sha256": "E9BF16FA87B210FA65B1BE143DC6DADAB3B53B983856C7143489B8BE8DA8B2B6",
+      "byteLength": 33253,
+      "lineCount": 648
+    },
+    {
+      "version": 33,
+      "fileName": "033_budget_instance_monthly_period.sql",
+      "sha256": "FF63C54D5A1410A95F1B94C7D1BC900A94C113757E7E316DFC48004D0B086111",
+      "byteLength": 32568,
+      "lineCount": 633
+    },
+    {
+      "version": 34,
+      "fileName": "034_budget_cost_center_directory.sql",
+      "sha256": "1E8E626E69177C0480DD1884D8C15D4A809E60C522C72AD36CF2DF72FB92E76A",
+      "byteLength": 54815,
+      "lineCount": 922
+    },
+    {
+      "version": 35,
+      "fileName": "035_budget_instance_approval.sql",
+      "sha256": "C5399E1D477DEC14BBD7ABF7005EF24FF1B31A4829E8CDC854EC06DE2FE687EF",
+      "byteLength": 80729,
+      "lineCount": 1458
+    },
+    {
+      "version": 36,
+      "fileName": "036_identity_reference_import_watermark.sql",
+      "sha256": "C3A49F4119F4B53C7830CF2F3B2015F746CF79CDFF8261981BA6E75C8BEEA567",
+      "byteLength": 15552,
+      "lineCount": 323
+    },
+    {
+      "version": 37,
+      "fileName": "037_budget_instance_line_comment.sql",
+      "sha256": "019EAF1F99C9E70BD4865AD42BD7CB356B7D2FA15A2DD0DE54E204D295548AB7",
+      "byteLength": 8535,
+      "lineCount": 193
+    },
+    {
+      "version": 38,
+      "fileName": "038_expense_request_numbering.sql",
+      "sha256": "A9127533C9FACFCD2047AD2FCA36818F49F294A216FC51D86A67661B10671BB0",
+      "byteLength": 18199,
+      "lineCount": 400
+    },
+    {
+      "version": 39,
+      "fileName": "039_counterparty_bin.sql",
+      "sha256": "B0ED0FC01A5BF3978C12B64E644F7699353A2617C0B2457D8165B959E0389E11",
+      "byteLength": 5828,
+      "lineCount": 151
+    },
+    {
+      "version": 40,
+      "fileName": "040_cash_flow_activity_type.sql",
+      "sha256": "D8D433407F54BDC4B109C184A38E4A146A342E2CD8358BD8483C988273D994A3",
+      "byteLength": 6625,
+      "lineCount": 159
+    },
+    {
+      "version": 41,
+      "fileName": "041_bdds_snapshot_and_flow_direction.sql",
+      "sha256": "422F3BCB2151F61F60080706B04FBBEE2AF0B2D091A20F548AD0CD5B3A68A943",
+      "byteLength": 18413,
+      "lineCount": 323
+    },
+    {
+      "version": 42,
+      "fileName": "042_cash_flow_actuals_2026.sql",
+      "sha256": "120CE40C6DFD19ADBEEC48583689EEEBB5B0B8D777734012A6950A4505A2D26B",
+      "byteLength": 11047,
+      "lineCount": 156
+    },
+    {
+      "version": 43,
+      "fileName": "043_cash_flow_item_cost_center.sql",
+      "sha256": "417186E5AF600B4607B84CE22082D411B57749F483F552D53CA8F97CADA33C03",
+      "byteLength": 7599,
+      "lineCount": 66
+    },
+    {
+      "version": 45,
+      "fileName": "045_cfo_initiators_and_budget_approval.sql",
+      "sha256": "9C8C385EDFD92BAC6708B1C704EC2233AAE192D0DBB8E2161B8712FAD0E35463",
+      "byteLength": 8552,
+      "lineCount": 116
+    },
+    {
+      "version": 46,
+      "fileName": "046_budget_instance_operation_rows.sql",
+      "sha256": "FA6921D02EB16F27D74357513B13ECDACC6781F1AEDAB6A7397CA1A0CD0A3CAD",
+      "byteLength": 3906,
+      "lineCount": 53
+    },
+    {
+      "version": 47,
+      "fileName": "047_budget_instance_line_list_covering.sql",
+      "sha256": "49E8FD105221659AE53F2679CA611E66A30F9FF5F3957EE9DAFA94E50A6EFECD",
+      "byteLength": 11996,
+      "lineCount": 177
+    },
+    {
+      "version": 48,
+      "fileName": "048_company_budget_versions.sql",
+      "sha256": "F31CF8A28EAF8E1C83F76F0181DD873E55761E5F9615AB41DC5926DB0A82D9A1",
+      "byteLength": 46109,
+      "lineCount": 601
+    },
+    {
+      "version": 49,
+      "fileName": "049_cost_center_directory_metadata.sql",
+      "sha256": "33B2E066136E4641CBB89F36DD58A76487BBA4A084E583E1991FF9FB98C50597",
+      "byteLength": 7753,
+      "lineCount": 124
+    },
+    {
+      "version": 50,
+      "fileName": "050_cash_flow_catalog_direction.sql",
+      "sha256": "553D3319AD22366FB55E1ABBFB38E040D8AF22E9204492842DD843669215BA0E",
+      "byteLength": 7020,
+      "lineCount": 116
+    },
+    {
+      "version": 51,
+      "fileName": "051_cash_flow_actuals_supported_years.sql",
+      "sha256": "841C0D6061B744007DEE66A0BFA94F3315253DB7A82532179C51E51AF1B9C1CE",
+      "byteLength": 25019,
+      "lineCount": 318
+    },
+    {
+      "version": 52,
+      "fileName": "052_cash_flow_item_display_order.sql",
+      "sha256": "CD59AC7271C06C68A4F70F59DD24F055CE83D7DD89D2B78C5A947F0477D3A480",
+      "byteLength": 10880,
+      "lineCount": 195
+    },
+    {
+      "version": 53,
+      "fileName": "053_expense_request_number_leases.sql",
+      "sha256": "CBDEBED19FFBB6CC08AC666BCFB07CFE4468CA9CF577B7A2707D1317CCF87EEA",
+      "byteLength": 6581,
+      "lineCount": 96
+    },
+    {
+      "version": 54,
+      "fileName": "054_private_attachment_files.sql",
+      "sha256": "8FC835924F96BE246EF9D6DA496E8A14C6C28CCEA2133819F2FD07988A5B5A30",
+      "byteLength": 4612,
+      "lineCount": 64
+    },
+    {
+      "version": 55,
+      "fileName": "055_director_owner_expense_route.sql",
+      "sha256": "2065D26EE7D068BFF730D12623A25D7C6416E380FF709BCFA0C2D2C9344474DB",
+      "byteLength": 5207,
+      "lineCount": 70
+    },
+    {
+      "version": 56,
+      "fileName": "056_accounting_payment_links_and_treasury_month.sql",
+      "sha256": "D967348657B1279FC59592091BFA39C6E6FD96333339FB9B6377A9158F2B2416",
+      "byteLength": 8789,
+      "lineCount": 117
+    },
+    {
+      "version": 57,
+      "fileName": "057_budget_instance_adjustments.sql",
+      "sha256": "253CF2E6E0CFF84C7AF0CA02381D477CBA53FB7231A0757749848626868D9958",
+      "byteLength": 8117,
+      "lineCount": 103
+    },
+    {
+      "version": 58,
+      "fileName": "058_accrual_department.sql",
+      "sha256": "2E926CD45B9B2FCCE83E4F2B4DF3521ECF8B34275FFF3B3778F05EB089ECB1AF",
+      "byteLength": 3104,
+      "lineCount": 46
+    },
+    {
+      "version": 59,
+      "fileName": "059_expense_payment_operations.sql",
+      "sha256": "D9E963B0D2AA412A7BDCDD33A818767BCB4041782561ED12BA617CB5B5AB9FFF",
+      "byteLength": 2885,
+      "lineCount": 44
+    },
+    {
+      "sha256": "1ABC3A20E5512183DE048D4FF1C11F86312063FDF6CA3BDB853824B0ADD0BC16",
+      "lineCount": 58,
+      "fileName": "060_company_budget_version_deletions.sql",
+      "version": 60,
+      "byteLength": 4242
+    },
+    {
+      "sha256": "0538A82785532F5586B54E3549F07E6503489F8710DBC32474FD1D0637E49BD2",
+      "byteLength": 3044,
+      "lineCount": 47,
+      "version": 61,
+      "fileName": "061_expense_item_name_250.sql"
+    }
+  ],
+  "installationExtensions": [
+    {
+      "fileName": "supplemental/cost-center-purposes.sql",
+      "sha256": "B19DA74A846E1F7E38BFBF06033ECC66CFF76AFD8209B7FD734D7DB18529DA35",
+      "byteLength": 2368
+    },
+    {
+      "fileName": "supplemental/staff-substitutions.sql",
+      "sha256": "FE1867A15C01D91BF338C9B27480F99208033BAB6AD09AC26CFD713EA3912634",
+      "byteLength": 6313
+    },
+    {
+      "fileName": "supplemental/usage-session-log.sql",
+      "sha256": "F400974B655E3997AD936ECE226E59C5B07B68F348640CAE806F061CB7B81CAD",
+      "byteLength": 4070
+    },
+    {
+      "fileName": "extensions/active_composition454.sql",
+      "sha256": "A5A36D4127CC645C0C6F0C69A6EF0059AAB8FCED0C1238215BA694130960CBA2",
+      "byteLength": 11917
+    },
+    {
+      "fileName": "extensions/payroll_allocation455.sql",
+      "sha256": "62BE71644676878068BAF26E6C2AED0682A9AD9C6A9EE48C5BDD3EE724CCC210",
+      "byteLength": 2286
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+.company-version-actions { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
+.company-version-row-actions { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.company-version-name { display: grid; gap: 4px; max-width: 600px; margin: 10px 0; }
+.company-budget-versions .directory-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+}
+.company-budget-versions h2 { font-size: 15px; margin: 12px 0 6px; }
+.company-budget-versions .directory-table th { text-align: center; vertical-align: middle; background: #dce7f3; }
+.company-budget-versions input[type="checkbox"] { width: auto; min-width: 0; }
+.company-version-warning { border: 1px solid #b88022; border-radius: 6px; padding: 8px 12px; background: #fff8e6; }
+.company-version-warning label { display: flex; gap: 6px; align-items: center; }
+.company-version-warning li { margin: 4px 0; overflow-wrap: anywhere; }
+.company-version-inline-composition { max-height: 300px; overflow: auto; max-width: 650px; }
+.company-version-inline-composition ul { margin: 6px 0; padding-left: 20px; }
+.company-version-inline-composition li { margin: 1px 0; line-height: 1.35; overflow-wrap: anywhere; }
+.company-version-inline-composition .company-version-composition-approved { color: #14713c; }
+.company-version-inline-composition button.directory-item-link,
+.bms-unified-theme .workspace-panel .company-budget-versions .company-version-inline-composition button.directory-item-link {
+  min-height: 0;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  line-height: inherit;
+}
+.company-version-activation-dialog, .company-version-delete-dialog { box-sizing: border-box; max-width: min(560px, calc(100vw - 32px)); max-height: calc(100vh - 32px); overflow: auto; padding: 20px; border: 1px solid #7a8da3; border-radius: 8px; }
+.company-version-activation-dialog::backdrop, .company-version-delete-dialog::backdrop { background: rgb(20 35 55 / 45%); }
+.company-version-activation-dialog p, .company-version-delete-dialog p { overflow-wrap: anywhere; }
+.company-version-delete-button { margin-left: 8px; padding: 4px 8px; color: #a42b23; }
+.company-version-delete-button svg { width: 18px; height: 18px; vertical-align: middle; }

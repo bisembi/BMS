@@ -1,0 +1,39 @@
+.opiu-page { padding: 0 6px 16px; }
+.opiu-filters { display: flex; align-items: end; gap: 12px; flex-wrap: wrap; padding: 12px; border: 1px solid #d5d8dc; border-radius: 8px; background: #f3f4f5; }
+.opiu-filters label { display: grid; gap: 5px; }
+.opiu-filters input, .opiu-filters select { min-height: 25px; }
+.opiu-filters select { max-width: 380px; }
+.opiu-note { color: #6c7784; font-size: 12px; margin: 10px 0; }
+.opiu-scroll { overflow: auto; border: 1px solid #ced5dc; max-width: 100%; }
+.opiu-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 12px; }
+.opiu-table th, .opiu-table td { height: 25px; padding: 2px 8px; border-right: 1px solid #dbe1e6; border-bottom: 1px solid #dbe1e6; box-sizing: border-box; }
+.opiu-table th { text-align: left; font-weight: 500; }
+.opiu-table td { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; min-width: 108px; }
+.opiu-table thead th { background: #285c84; color: #fff; text-align: center; font-weight: 600; white-space: nowrap; }
+.opiu-table:not(.opiu-detail-table) th:first-child { position: sticky; left: 0; background: #fff; min-width: 290px; max-width: 400px; z-index: 1; }
+.opiu-table:not(.opiu-detail-table) thead th:first-child { background: #285c84; }
+.opiu-table tr.opiu-department > * { background: #e7eff6; font-weight: 600; }
+.opiu-table tr.opiu-department > th:first-child { background: #e7eff6; }
+.opiu-department button { border: 0; background: transparent; color: inherit; font: inherit; padding: 0; text-align: left; }
+.opiu-value { border: 0; background: transparent; color: #174e7a; padding: 0; min-height: 20px; font: inherit; width: 100%; text-align: right; }
+.opiu-value:hover { text-decoration: underline; }
+.opiu-table tfoot > tr > * { background: #e3e7eb !important; font-weight: 600; }
+.opiu-detail { margin-top: 20px; padding: 12px; border: 1px solid #d5d8dc; border-radius: 8px; }
+.opiu-detail-heading { display: flex; align-items: start; justify-content: space-between; gap: 12px; }
+.opiu-detail-heading h2 { margin: 0; font-size: 15px; }
+.opiu-detail-table td { text-align: left; white-space: normal; }
+.opiu-detail-table td:nth-child(5) { text-align: right; white-space: nowrap; }
+.opiu-detail-table button { min-height: 21px; padding: 1px 6px; }
+.opiu-pager { display: flex; align-items: center; gap: 8px; margin: 10px 0 0; }
+.bms-unified-theme .workspace-panel .opiu-table tbody th { text-align: left; }
+.bms-unified-theme .workspace-panel .opiu-table button.opiu-value,
+.bms-unified-theme .workspace-panel .opiu-table .opiu-department button {
+  border: 0; border-radius: 0; background: transparent; color: inherit; padding: 0;
+  min-height: 20px; height: 20px; font: inherit; box-shadow: none;
+}
+.bms-unified-theme .workspace-panel .opiu-table button.opiu-value { color: #174e7a; text-align: right; }
+.bms-unified-theme .workspace-panel .opiu-table button.opiu-value:hover { text-decoration: underline; background: #eff4f8; }
+.bms-unified-theme .workspace-panel .opiu-table .opiu-department button { text-align: left; }
+.opiu-table:not(.opiu-detail-table) tr > :last-child { position: sticky; right: 0; background: #f5f7f9; z-index: 1; }
+.opiu-table:not(.opiu-detail-table) thead tr > :last-child { background: #285c84; }
+.opiu-table:not(.opiu-detail-table) tr.opiu-department > :last-child { background: #e7eff6; }

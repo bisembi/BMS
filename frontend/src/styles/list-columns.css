@@ -1,0 +1,9 @@
+.list-column-picker { margin: 8px 0; min-width: 0; }
+.list-column-picker > summary { cursor: pointer; width: fit-content; padding: 8px 10px; border-radius: 4px; }
+.list-column-picker > summary:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
+.list-column-picker fieldset { margin: 8px 0; border: 1px solid #d6dce3; border-radius: 6px; padding: 12px; min-width: 0; }
+.list-column-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 10px 16px; }
+.list-column-options label { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.list-column-options input[type='checkbox'] { width: 18px; height: 18px; min-width: 18px; padding: 0; margin: 0; }
+.list-column-options span { overflow-wrap: anywhere; }
+.list-column-buttons { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }

@@ -1,0 +1,25 @@
+.change-journal-filters, .change-journal-toolbar {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px;
+  margin: 0 0 12px;
+  border: 1px solid var(--bms-border, #d7d7d7);
+  border-radius: 8px;
+}
+.change-journal-filters label { display: grid; gap: 4px; }
+.change-journal-toolbar { align-items: center; }
+.change-journal-toolbar label { display: flex; align-items: center; gap: 8px; }
+.change-journal-table-wrap { overflow-x: auto; border: 1px solid var(--bms-border, #d7d7d7); border-radius: 8px; }
+.change-journal-table { width: 100%; min-width: 1000px; border-collapse: collapse; }
+.change-journal-table caption { text-align: left; padding: 8px 12px; color: var(--bms-muted, #777777); }
+.change-journal-table th, .change-journal-table td {
+  padding: 8px 10px; border: 1px solid var(--bms-border-soft, #e6e6e6); vertical-align: top; overflow-wrap: anywhere;
+}
+.change-journal-table th { text-align: center; background: var(--bms-header, #f2f2f2); color: var(--bms-ruby-800, #7a1020); }
+.change-journal-table td:first-child { white-space: nowrap; }
+.change-journal-table tbody tr, .change-journal-table tbody tr:hover { background: transparent; cursor: default; }
+.change-journal-table th:nth-child(2) { width: 15%; }
+.change-journal-table th:nth-child(3) { width: 19%; }
+.change-journal-table th:nth-child(4) { width: 25%; }

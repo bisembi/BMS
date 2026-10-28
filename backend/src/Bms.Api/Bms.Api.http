@@ -1,0 +1,28 @@
+@BmsApi = http://localhost:5188
+@Actor = dev-user
+@IdempotencyKey = sample-draft-001
+
+GET {{BmsApi}}/health/live
+
+###
+GET {{BmsApi}}/api/v1/reference-data/currencies
+X-Bms-Actor-Id: {{Actor}}
+
+###
+POST {{BmsApi}}/api/v1/expense-requests
+Content-Type: application/json
+X-Bms-Actor-Id: {{Actor}}
+Idempotency-Key: {{IdempotencyKey}}
+
+{
+  "currencyCode": "KZT",
+  "purpose": "Учебный черновик",
+  "businessJustification": "Необходимость для работы магазина",
+  "isUrgent": true,
+  "urgencyReason": "Аварийная замена оборудования",
+  "lines": [
+    {
+      "amount": 50000.0000
+    }
+  ]
+}

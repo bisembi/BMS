@@ -1,0 +1,22 @@
+.budget-history-section { margin: 12px 0; }
+.budget-history-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.budget-history-tabs { display: flex; gap: 4px; border-bottom: 1px solid #d5d7db; margin-bottom: 10px; }
+.budget-history-tabs button[aria-selected="true"] { font-weight: 700; color: #8f1023; border-bottom: 2px solid #a70c25; }
+.budget-history-scroll { overflow-x: auto; margin: 12px 0; }
+.budget-history-scroll:focus-visible { outline: 2px solid #8f1023; outline-offset: 2px; }
+.budget-history-grid {
+  display: grid;
+  grid-template-columns: 2rem minmax(15rem, 1.4fr) minmax(10rem, 1fr) 11rem minmax(12rem, 1fr);
+  column-gap: 16px;
+  align-items: start;
+  min-width: 864px;
+  overflow-wrap: anywhere;
+}
+.budget-history-heading { padding: 6px 0; color: #58616f; font-weight: 600; }
+.budget-history-events { list-style: none; padding: 0; margin: 0; }
+.budget-history-row { padding: 6px 0; border: 0; }
+.budget-history-number { color: #8f1023; }
+.budget-history-actor { color: #58616f; }
+.budget-history-time { white-space: nowrap; color: #58616f; font-variant-numeric: tabular-nums; }
+.budget-history-details p { margin: 0; }
+.budget-history-comment { white-space: pre-wrap; }

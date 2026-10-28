@@ -1,0 +1,203 @@
+.budget-copy-actuals-dialog,
+.budget-copy-actuals-dialog * {
+  box-sizing: border-box;
+}
+
+.budget-copy-actuals-dialog {
+  width: min(560px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 18px;
+  overflow-y: auto;
+  border: 1px solid var(--bms-border, #d7d7d7);
+  border-radius: 8px;
+  background: var(--bms-surface, #fff);
+  color: var(--bms-text, #252525);
+  box-shadow: 0 16px 48px rgb(0 0 0 / 24%);
+}
+
+.budget-copy-actuals-dialog::backdrop {
+  background: rgb(20 22 26 / 38%);
+}
+
+.budget-copy-actuals-dialog h2 {
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+
+.budget-copy-actuals-scope {
+  margin: 0 0 14px;
+  overflow-wrap: anywhere;
+}
+
+.budget-copy-actuals-period {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.budget-copy-actuals-period > label,
+.budget-copy-actuals-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.budget-copy-actuals-dialog input:not([type="checkbox"]) {
+  width: 100%;
+  min-width: 0;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid var(--bms-border, #d7d7d7);
+  border-radius: 6px;
+  background: var(--bms-surface, #fff);
+  color: inherit;
+  font: inherit;
+}
+
+.budget-copy-actuals-all {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 5px;
+}
+
+.budget-copy-actuals-dialog input[type="checkbox"],
+.cash-flow-multi-select input[type="checkbox"] {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  min-height: 16px;
+  margin: 1px 0 0;
+  padding: 0;
+  accent-color: var(--bms-ruby-700, #9b111e);
+}
+
+.budget-copy-actuals-dialog button,
+.cash-flow-multi-select button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 25px;
+  min-height: 25px;
+  max-height: 25px;
+  padding: 2px 8px;
+  border: 1px solid var(--bms-border, #d7d7d7);
+  border-radius: 6px;
+  background: var(--bms-surface, #fff);
+  color: inherit;
+  font: inherit;
+  line-height: 1.1;
+}
+
+.budget-copy-actuals-dialog button.primary-button {
+  border-color: var(--bms-ruby-700, #9b111e);
+  background: var(--bms-ruby-700, #9b111e);
+  color: #fff;
+}
+
+.budget-copy-actuals-dialog button:disabled,
+.cash-flow-multi-select button:disabled {
+  border-color: var(--bms-border-soft, #e6e6e6);
+  background: var(--bms-disabled, #f5f5f5);
+  color: var(--bms-disabled-text, #8a8a8a);
+}
+
+.budget-copy-actuals-dialog :is(button, input):focus-visible,
+.cash-flow-multi-select :is(button, input):focus-visible {
+  outline: 2px solid var(--bms-ruby-700, #9b111e);
+  outline-offset: 2px;
+}
+
+.budget-copy-actuals-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.budget-copy-actuals-error {
+  color: #9b111e;
+  overflow-wrap: anywhere;
+}
+
+.cash-flow-multi-select {
+  min-width: 0;
+  width: 100%;
+}
+
+.cash-flow-multi-select .cash-flow-multi-select-trigger {
+  justify-content: space-between;
+  width: 100%;
+  min-width: 0;
+}
+
+.cash-flow-multi-select-trigger > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cash-flow-multi-select-trigger > svg {
+  flex: 0 0 auto;
+}
+
+/* Flow layout keeps the popup in the native dialog top layer, without clipping. */
+.cash-flow-multi-select-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  max-height: min(340px, 45vh);
+  max-height: min(340px, 45dvh);
+  margin-top: 5px;
+  padding: 7px;
+  border: 1px solid var(--bms-border, #d7d7d7);
+  border-radius: 6px;
+  background: var(--bms-surface, #fff);
+}
+
+.cash-flow-multi-select-search,
+.cash-flow-multi-select-visible,
+.cash-flow-multi-select-summary {
+  flex: 0 0 auto;
+}
+
+.cash-flow-multi-select-options {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.cash-flow-multi-select label.cash-flow-multi-select-visible,
+.cash-flow-multi-select label.cash-flow-multi-select-option {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 7px;
+  min-height: 25px;
+  padding: 3px 2px;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.cash-flow-multi-select-option > span {
+  min-width: 0;
+}
+
+.cash-flow-multi-select-summary,
+.cash-flow-multi-select-empty {
+  margin: 0;
+  font-size: 11px;
+  color: var(--bms-text-soft, #6b7280);
+}
+
+@media (max-width: 420px) {
+  .budget-copy-actuals-dialog { padding: 12px; }
+  .budget-copy-actuals-period { grid-template-columns: minmax(0, 1fr); }
+}

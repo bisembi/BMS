@@ -1,0 +1,14 @@
+.cash-flow-structure-toolbar { margin: 0 0 12px; }
+.cash-flow-structure-preview { margin: 12px 0; padding: 14px; border: 1px solid #d0d4d9; border-radius: 8px; background: #fff; }
+.cash-flow-structure-preview h2 { margin: 0; }
+.cash-flow-structure-preview p { margin: 10px 0; }
+.cash-flow-structure-scroll { overflow: auto; max-height: 65vh; }
+.cash-flow-structure-preview table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.cash-flow-structure-preview th { position: static; background: #2d5e87; color: #fff; text-align: center; }
+.cash-flow-structure-preview th, .cash-flow-structure-preview td { padding: 5px 10px; border: 1px solid #b5c6d9; }
+.cash-flow-structure-preview tr { height: 27px; }
+.cash-flow-structure-preview th, .cash-flow-structure-preview td { height: 27px; line-height: 16px; box-sizing: border-box; white-space: nowrap; }
+.cash-flow-structure-activity { background: #183e5c; color: #fff; font-weight: 700; }
+.cash-flow-structure-section { background: #c8dcee; font-weight: 700; }
+.cash-flow-structure-group { background: #dce8f4; font-weight: 700; }
+.cash-flow-structure-article { background: #fff; }

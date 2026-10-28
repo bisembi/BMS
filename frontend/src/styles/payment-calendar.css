@@ -1,0 +1,197 @@
+.payment-calendar-page {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-calendar-page h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.payment-calendar-filters {
+  display: grid;
+  grid-template-columns: auto minmax(145px, 190px) auto minmax(145px, 190px) auto minmax(170px, 230px);
+  align-items: center;
+  gap: 5px 8px;
+  padding: 7px 8px;
+  border: 1px solid #d9dce1;
+  background: #fbfbfa;
+  color: #5d6470;
+  font-size: 12px;
+}
+
+.payment-calendar-filters input,
+.payment-calendar-filters select {
+  min-width: 0;
+  min-height: 28px;
+  border: 1px solid #bfc3c8;
+  border-radius: 1px;
+  background: #fff;
+  padding: 4px 7px;
+  color: #252525;
+}
+
+.payment-calendar-filters input:focus,
+.payment-calendar-filters select:focus,
+.payment-calendar-open:focus-visible,
+.payment-calendar-paging button:focus-visible,
+.payment-calendar-export:focus-visible,
+.payment-calendar-retry:focus-visible {
+  outline: 2px solid #8a7923;
+  outline-offset: 2px;
+}
+
+.payment-calendar-note {
+  margin: 0;
+  padding: 7px 9px;
+  border: 1px solid #e2d37f;
+  background: #fffaf0;
+  color: #604f12;
+  font-size: 13px;
+}
+
+.payment-calendar-retry,
+.payment-calendar-export,
+.payment-calendar-paging button {
+  min-height: 28px;
+  width: fit-content;
+  border: 1px solid #b9bcc1;
+  border-radius: 2px;
+  background: #f7f7f7;
+  padding: 4px 10px;
+  color: #252525;
+}
+
+.payment-calendar-retry:hover,
+.payment-calendar-export:hover:not(:disabled),
+.payment-calendar-paging button:hover:not(:disabled) {
+  border-color: #b7a847;
+  background: #fff9d6;
+}
+
+.payment-calendar-export-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #5d6470;
+  font-size: 12px;
+}
+
+.payment-calendar-export:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.payment-calendar-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid #d6d8db;
+}
+
+.payment-calendar-table {
+  width: 100%;
+  min-width: 1180px;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 12px;
+}
+
+.payment-calendar-table caption {
+  padding: 7px 8px;
+  border-bottom: 1px solid #d6d8db;
+  background: #fbfbfa;
+  text-align: left;
+  font-weight: 600;
+}
+
+.payment-calendar-table th,
+.payment-calendar-table td {
+  padding: 6px 8px;
+  border-right: 1px solid #dddfe2;
+  border-bottom: 1px solid #dddfe2;
+  text-align: left;
+  vertical-align: top;
+}
+
+.payment-calendar-table th:last-child,
+.payment-calendar-table td:last-child {
+  border-right: 0;
+}
+
+.payment-calendar-table thead th {
+  background: #f4f4f2;
+  color: #454545;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.payment-calendar-table tbody tr:nth-child(even) {
+  background: #fbfbfa;
+}
+
+.payment-calendar-table tbody tr.payment-calendar-row-inactive {
+  background: #f1f1f1;
+  color: #7a7a7a;
+}
+
+.payment-calendar-table .payment-calendar-organization th,
+.payment-calendar-table .payment-calendar-organization td {
+  border-top: 2px solid #afc1d2;
+  background: #eaf1f7;
+  color: #2c4258;
+  font-weight: 600;
+}
+
+.payment-calendar-table .payment-calendar-organization td {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.payment-calendar-organization-detail {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+.payment-calendar-table td:nth-child(n + 5),
+.payment-calendar-table tfoot td {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.payment-calendar-table tfoot th,
+.payment-calendar-table tfoot td {
+  border-bottom: 0;
+  background: #fff8cf;
+  font-weight: 700;
+}
+
+.payment-calendar-open {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: #075eb4;
+  text-decoration: underline;
+}
+
+.payment-calendar-paging {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #5d6470;
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  .payment-calendar-filters {
+    grid-template-columns: minmax(90px, auto) minmax(0, 1fr);
+  }
+
+  .payment-calendar-paging {
+    flex-wrap: wrap;
+  }
+}

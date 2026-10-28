@@ -1,0 +1,134 @@
+.workspace-tab {
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 0;
+  background: #fff;
+  text-align: left;
+}
+
+.workspace-tab.document > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.workspace-tab.document {
+  border-right: 0;
+}
+
+.workspace-tab-close {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  align-self: center;
+  margin-right: 8px;
+  border: 0;
+  background: transparent;
+  color: #656565;
+}
+
+.workspace-tab:focus-visible,
+.workspace-tab-close:focus-visible,
+.nav-item:focus-visible,
+.icon-button:focus-visible {
+  outline: 2px solid #9b111e;
+  outline-offset: -2px;
+}
+
+.section-page {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 320px));
+  align-items: start;
+  gap: 44px;
+  padding: 36px 22px;
+}
+
+.section-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-lead {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.section-lead .section-link:first-child {
+  padding: 2px 3px;
+  border: 0;
+  background: transparent;
+}
+
+.section-group h2 {
+  margin: 0 0 11px;
+  color: #9b111e;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.section-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding-left: 18px;
+}
+
+.section-link {
+  min-height: 22px;
+  padding: 1px 0;
+  border: 0;
+  background: transparent;
+  color: #343434;
+  text-align: left;
+  line-height: 1.25;
+}
+
+.section-link:hover,
+.section-link:focus-visible {
+  color: #000;
+  text-decoration: underline;
+}
+
+.section-link.primary {
+  font-weight: 400;
+}
+
+.placeholder-page {
+  max-width: 860px;
+}
+
+.placeholder-page h1 {
+  margin: 2px 0 14px;
+}
+
+.readonly-placeholder,
+.readonly-tab-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 10px 12px;
+  border: 1px solid #d9dce0;
+  background: #f7f8f9;
+  color: #555b64;
+}
+
+.readonly-placeholder p,
+.readonly-tab-panel p {
+  margin: 4px 0 0;
+}
+
+.expense-request-form-page {
+  min-width: 0;
+}
+
+@media (max-width: 920px) {
+  .section-page {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 22px 8px;
+  }
+}

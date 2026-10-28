@@ -1,0 +1,40 @@
+.payment-grid { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.payment-grid-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.payment-grid-heading h2, .payment-grid-heading h3 { margin: 0; color: #8f0b24; font-size: 18px; text-transform: capitalize; }
+.payment-grid-heading > span { color: #646b75; font-size: 12px; }
+.payment-grid-scroll { max-width: 100%; overflow-x: auto; }
+.payment-grid-table { width: 100%; min-width: 1080px; table-layout: fixed; border-collapse: separate; border-spacing: 6px; background: #fff; font-size: 12px; }
+.payment-grid-table th { padding: 8px 4px; color: #8f0b24; background: transparent; border: 0; text-align: center; font-weight: 600; }
+.payment-grid-table td { padding: 0; border: 0; vertical-align: top; }
+.payment-grid-table .payment-grid-tile,
+.bms-unified-theme .workspace-panel .payment-grid .payment-grid-table button.payment-grid-trigger { position: relative; box-sizing: border-box; display: flex; flex-direction: column; width: 100%; min-width: 0; height: 112px; min-height: 112px; margin: 0; padding: 10px; border: 1px solid #dfe1e5; border-radius: 4px; background: #fff; color: #252525; box-shadow: none; text-align: left; container-type: inline-size; }
+.payment-grid-tile time, .payment-grid-week-range { flex: 0 0 auto; color: #707680; font-size: 11px; font-weight: 400; line-height: 14px; white-space: nowrap; }
+.payment-grid-tile .payment-grid-value { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 0 6px; font-size: min(26px, calc(158cqw / var(--payment-amount-length))); font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; pointer-events: none; }
+.payment-grid-tile .payment-grid-value-empty { color: #b6bac0; font-weight: 400; }
+.payment-grid-tile .payment-grid-value-unavailable { color: #8f0b24; font-size: 14px; font-weight: 400; }
+.payment-grid-weekend .payment-grid-tile,
+.bms-unified-theme .workspace-panel .payment-grid .payment-grid-weekend button.payment-grid-day { background: #fbfaf7; }
+.payment-grid-outside .payment-grid-tile { background: #f6f7f8; border-color: #eceef0; }
+.payment-grid-outside time { color: #adb2ba; }
+.payment-grid-week-total .payment-grid-tile,
+.bms-unified-theme .workspace-panel .payment-grid .payment-grid-week-total button.payment-grid-trigger { background: #fff8db; border-color: #eee4b7; }
+.payment-grid-table button.payment-grid-trigger { cursor: pointer; }
+.payment-grid-table button.payment-grid-trigger:hover,
+.bms-unified-theme .workspace-panel .payment-grid .payment-grid-table button.payment-grid-trigger:hover { background: #fffdf5; border-color: #bdb5a0; }
+.payment-grid-table button.payment-grid-trigger[aria-expanded="true"],
+.bms-unified-theme .workspace-panel .payment-grid .payment-grid-table button.payment-grid-trigger[aria-expanded="true"] { background: #fff9e6; border-color: #8f0b24; box-shadow: inset 0 0 0 1px #8f0b24; }
+.payment-grid-table button.payment-grid-trigger:focus-visible,
+.bms-unified-theme .workspace-panel .payment-grid .payment-grid-table button.payment-grid-trigger:focus-visible { outline: 2px solid #8f0b24; outline-offset: 2px; }
+.payment-grid-details { border: 1px solid #d6d8db; border-radius: 6px; padding: 12px; overflow-x: auto; }
+.payment-grid-details table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 12px; }
+.payment-grid-details th, .payment-grid-details td { box-sizing: border-box; height: 25px; padding: 0 10px; border: 1px solid #e1e3e5; line-height: 20px; text-align: left; vertical-align: middle; white-space: nowrap; }
+.payment-grid-details td button,
+.bms-unified-theme .workspace-panel .payment-grid-details td button { box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; min-height: 23px; height: 23px; padding: 1px 8px; line-height: 18px; vertical-align: middle; }
+.payment-grid-details th { background: #f3f3f3; color: #8f0b24; }
+.payment-grid-details td:nth-last-child(2), .payment-grid-details td:nth-last-child(3) { text-align: right; font-variant-numeric: tabular-nums; }
+.goods-grid458 .payment-grid-table .payment-grid-tile,
+.bms-unified-theme .workspace-panel .goods-grid458 .payment-grid-table button.payment-grid-trigger { height: 154px; min-height: 154px; }
+.goods-grid458 .payment-grid-tile .payment-grid-value { inset: 20px 0 62px; }
+.goods-grid-breakdown458 { position: absolute; right: 9px; left: 9px; bottom: 8px; display: flex; flex-direction: column; gap: 2px; color: #707680; font-size: 10px; font-weight: 400; line-height: 13px; }
+.goods-grid-breakdown458 > span { display: flex; justify-content: space-between; gap: 4px; }
+.goods-grid-breakdown458 > span > span:last-child { color: #444b55; font-variant-numeric: tabular-nums; white-space: nowrap; }

@@ -1,0 +1,15 @@
+.budget-directory-purpose-page > nav {
+  padding: 8px;
+  margin-top: 8px;
+}
+.budget-directory-purpose-page > nav .directory-pager {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.budget-directory-purpose-page .cost-department-purpose-cell {
+  text-align: center;
+  vertical-align: middle;
+  min-width: 170px;
+}

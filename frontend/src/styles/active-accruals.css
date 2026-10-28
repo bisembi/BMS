@@ -1,0 +1,207 @@
+.active-accruals-page {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.active-accruals-page h1,
+.active-accruals-page h2 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.active-accruals-page h1 { font-size: 18px; }
+.active-accruals-page h2 { font-size: 14px; }
+
+.active-accruals-note,
+.active-accruals-open-rule {
+  margin: 0;
+  padding: 7px 9px;
+  border: 1px solid #d9dce1;
+  background: #fbfbfa;
+  color: #515761;
+  font-size: 13px;
+}
+
+.active-accruals-open-rule {
+  border-color: #e2d37f;
+  background: #fffaf0;
+  color: #604f12;
+}
+
+.active-accruals-filters {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(145px, 1fr)) auto auto;
+  align-items: end;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid #d9dce1;
+  background: #fbfbfa;
+}
+
+.active-accruals-filters label {
+  display: grid;
+  gap: 4px;
+  color: #5d6470;
+  font-size: 12px;
+}
+
+.active-accruals-filters .active-accruals-collapse {
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  align-self: stretch;
+}
+
+.active-accruals-filters .active-accruals-collapse input {
+  min-height: auto;
+  margin: 0;
+}
+
+.active-accruals-filters input,
+.active-accruals-filters select,
+.active-accruals-filters button,
+.active-accruals-pagination button {
+  min-width: 0;
+  min-height: 30px;
+  border: 1px solid #bfc3c8;
+  border-radius: 2px;
+  background: #fff;
+  padding: 4px 8px;
+  color: #252525;
+}
+
+.active-accruals-filters button,
+.active-accruals-pagination button {
+  background: #f7f7f7;
+}
+
+.active-accruals-filters button:focus-visible,
+.active-accruals-filters input:focus-visible,
+.active-accruals-filters select:focus-visible,
+.active-accruals-open:focus-visible,
+.active-accruals-pagination button:focus-visible {
+  outline: 2px solid #8a7923;
+  outline-offset: 2px;
+}
+
+.active-accruals-totals {
+  padding: 8px;
+  border: 1px solid #d9dce1;
+  background: #fffdf0;
+}
+
+.active-accruals-totals dl {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 8px 0 0;
+}
+
+.active-accruals-totals dl div { min-width: 0; }
+.active-accruals-totals dt { color: #5d6470; font-size: 12px; }
+.active-accruals-totals dd { margin: 2px 0 0; font-weight: 600; }
+
+.active-accruals-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid #d6d8db;
+}
+
+.active-accruals-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 12px;
+}
+
+.active-accruals-table caption {
+  padding: 7px 8px;
+  border-bottom: 1px solid #d6d8db;
+  background: #fbfbfa;
+  text-align: left;
+  font-weight: 600;
+}
+
+.active-accruals-table th,
+.active-accruals-table td {
+  padding: 6px 8px;
+  border-right: 1px solid #dddfe2;
+  border-bottom: 1px solid #dddfe2;
+  text-align: left;
+  vertical-align: top;
+}
+
+.active-accruals-table thead th {
+  background: #f4f4f2;
+  white-space: nowrap;
+}
+
+.active-accruals-table tbody tr:nth-child(even) { background: #fbfbfa; }
+.active-accruals-table .active-accruals-group th {
+  background: #e9edf2;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.active-accruals-table .active-accruals-number,
+.active-accruals-table tfoot td { text-align: right; white-space: nowrap; }
+
+.active-accruals-column-note {
+  margin: 10px 0 0;
+  color: #5d6470;
+  font-size: 12px;
+}
+
+.active-accruals-table .active-accrual-age-yellow > td {
+  background: #fff3cd;
+  color: #252525;
+}
+
+.active-accruals-table .active-accrual-age-orange > td {
+  background: #ffe1b5;
+  color: #252525;
+}
+
+.active-accruals-table .active-accrual-age-red > td {
+  background: #fadbd8;
+  color: #252525;
+}
+
+.active-accruals-table tfoot th,
+.active-accruals-table tfoot td {
+  border-bottom: 0;
+  background: #fff8cf;
+  font-weight: 700;
+}
+
+.active-accruals-open {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: #075eb4;
+  text-decoration: underline;
+}
+
+.active-accruals-pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #5d6470;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .active-accruals-filters,
+  .active-accruals-totals dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .active-accruals-pagination { flex-wrap: wrap; }
+}
+
+@media (max-width: 520px) {
+  .active-accruals-filters,
+  .active-accruals-totals dl {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

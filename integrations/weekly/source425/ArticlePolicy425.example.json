@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": "<configure>",
+  "reviewStatus": "<configure>",
+  "sourceCatalogSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "sourceCatalogAtUtc": 0,
+  "excludedOperationKinds": [
+    "<configure>"
+  ],
+  "permittedOperationKinds": [
+    "<configure>"
+  ],
+  "mixedExcludedArticleRule": "<configure>",
+  "partialClosureRule": "<configure>",
+  "unknownOrChangedArticleRule": "<configure>",
+  "recipientScope": "<configure>",
+  "maxOwners": 0,
+  "maxRows": 0,
+  "maxRowsPerOwner": 0,
+  "articles": [
+    {
+      "id": "EEEEEEEE-EEEE-4EEE-8EEE-00000000003C",
+      "code": "<configure>",
+      "name": "<configure>",
+      "isGroup": false,
+      "classification": "EXCLUDE_TAX_SOCIAL",
+      "flag": null
+    }
+  ]
+}

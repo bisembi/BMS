@@ -1,0 +1,27 @@
+.bms-table-resize-layer { position: fixed; inset: 0; pointer-events: none; z-index: 40; }
+.bms-table-column-rail { position: fixed; width: 6px; padding: 0; margin: 0; pointer-events: auto; cursor: ew-resize; touch-action: none; user-select: none; background: transparent; }
+.bms-table-column-rail::before { content: ""; position: absolute; inset: 0 1px; pointer-events: none; }
+.bms-table-column-rail:hover, .bms-table-column-rail:focus-visible, .bms-table-column-rail.is-dragging { outline: none; }
+.bms-table-column-rail:hover::before, .bms-table-column-rail:focus-visible::before, .bms-table-column-rail.is-dragging::before { background: rgba(157, 17, 38, .2); box-shadow: inset 0 0 0 1px rgba(157, 17, 38, .4); }
+.bms-table-column-rail[hidden] { display: none; }
+@media screen {
+  /* One table-header policy for every current, lazy and future workspace table.
+     Keep native layout on vertical scroll; left/right sticky columns survive. */
+  .bms-unified-theme table > thead,
+  .workspace-panel table > thead {
+    position: static !important;
+    display: table-header-group;
+    transform: none !important;
+  }
+  .bms-unified-theme table > thead > tr,
+  .workspace-panel table > thead > tr { position: static !important; transform: none !important; }
+  .bms-unified-theme table > thead > tr > :is(th, td),
+  .workspace-panel table > thead > tr > :is(th, td) { top: auto !important; bottom: auto !important; transform: none !important; }
+  .workspace-panel table[data-bms-resizable] > colgroup:not(.bms-managed-colgroup) { display: none; }
+  .workspace-panel table[data-bms-resizable] > colgroup.bms-managed-colgroup { display: table-column-group; }
+  .bms-unified-theme .workspace-panel table[data-bms-resize-enhanced] .budget-instance-column-resizer { display: none; }
+  .bms-unified-theme .workspace-panel table[data-bms-resizable] { width: var(--bms-table-width) !important; min-width: var(--bms-table-width) !important; max-width: none !important; table-layout: fixed !important; }
+  .bms-unified-theme .workspace-panel table[data-bms-resizable] [data-bms-resize-cell] { width: var(--bms-cell-width) !important; min-width: var(--bms-cell-width) !important; max-width: var(--bms-cell-width) !important; box-sizing: border-box; }
+  .bms-unified-theme .workspace-panel table[data-bms-resizable] col[data-bms-resize-col] { width: var(--bms-col-width) !important; }
+}
+@media print { .bms-table-resize-layer, .bms-table-column-rail { display: none !important; } .bms-managed-colgroup { display: none; } }
